@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Aspose.3D-Cloud</id>
+        <version>19.10</version>
+        <title>Aspose.3D Cloud SDK for .NET</title>
+        <authors>asposecloud</authors>
+        <owners>asposecloud</owners>
+        <iconUrl>https://www.aspose.cloud/templates/asposecloud/App_Themes/V3/images/sdk/64x64/aspose_3d-for-net.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Aspose.3D Cloud for .NET is a SDK for working with 3D files. It allows developers to create/manipulate/render 3D scene and work with FBX,STL,OBJ,3DS,U3D,RVM,PDF,GLTF files. </description>
+        <copyright>Aspose 2002-2019. All Rights Reserved.</copyright>
+        <tags>3D FBX OBJ 3DS U3D Collada PDF glTF PLY RVM AMF</tags>
+        <dependencies>
+            <dependency id="Newtonsoft.Json" version="9.0.1.19813" />
+            <dependency id="RestSharp" version="105.1.0.0" />
+        </dependencies>
+    </metadata>
+	<files>
+		<file src="Aspose.ThreeD.Cloud.SDK\bin\Release\Aspose.ThreeD.Cloud.SDK.dll" target="lib\net4.5" />
+	</files>
+</package>

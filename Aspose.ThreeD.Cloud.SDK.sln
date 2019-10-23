@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspose.ThreeD.Cloud.SDK", "src\Aspose.ThreeD.Cloud.SDK\Aspose.ThreeD.Cloud.SDK.csproj", "{94074701-1A88-447E-86BF-000B845F0DCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspose.ThreeD.Cloud.SDK.Test", "src\Aspose.ThreeD.Cloud.SDK.Test\Aspose.ThreeD.Cloud.SDK.Test.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94074701-1A88-447E-86BF-000B845F0DCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94074701-1A88-447E-86BF-000B845F0DCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94074701-1A88-447E-86BF-000B845F0DCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94074701-1A88-447E-86BF-000B845F0DCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {81F3F193-2B5D-4BD2-BDCC-A791E9A6D114}
+	EndGlobalSection
+EndGlobal

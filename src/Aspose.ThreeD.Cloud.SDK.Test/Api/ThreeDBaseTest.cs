@@ -16,8 +16,8 @@ namespace Aspose.ThreeD.Cloud.SDK.Test
         /**************************************
         Use the appsid(clientId) and appkey(clientSecret) of yourself
         ***************************************/
-        protected string clientId = "xxxxxx";
-        protected string clientSecret = "yyyyyyyy";
+        protected string clientId = "****your appsid****";
+        protected string clientSecret = "****your appkey****";
         protected string storageType = "First Storage";
         protected static string accesstoken;
 

@@ -1,7 +1,7 @@
 # Aspose.3D Cloud SDK for .NET [![NuGet](https://img.shields.io/nuget/v/Aspose.3D-3D.svg)](https://www.nuget.org/packages/Aspose.3D-Cloud/)
 
 - API version: 3.0
-- SDK version: 19.10
+- SDK version: 19.11
 
 This repository contains Aspose.3D Cloud SDK for .NET source code. This SDK allows you to work with Aspose.3D Cloud REST APIs in your .NET applications quickly and easily, with zero initial cost.
 
@@ -91,7 +91,7 @@ From within Visual Studio:
 
 5. Click on the Aspose.3D-Cloud package, select the appropriate version in the right-tab and click *Install*.
 
-   ### Sample usage
+### Sample usage
 
     
 

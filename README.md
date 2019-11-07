@@ -1,4 +1,4 @@
-# Aspose.3D Cloud SDK for .NET [![NuGet](https://img.shields.io/nuget/v/Aspose.3D-3D.svg)](https://www.nuget.org/packages/Aspose.3D-Cloud/19.11.0)
+# Aspose.3D Cloud SDK for .NET [![NuGet](https://img.shields.io/nuget/v/Aspose.3D-Cloud.svg)](https://www.nuget.org/packages/Aspose.3D-Cloud/)
 
 - API version: 3.0
 - SDK version: 19.11

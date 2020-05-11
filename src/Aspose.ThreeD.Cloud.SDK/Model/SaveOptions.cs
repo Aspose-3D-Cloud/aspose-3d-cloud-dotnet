@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="SaveOptions.cs">
-//   Copyright (c) 2018 Aspose.ThreeD for Cloud
+//   Copyright (c) 2020 Aspose.ThreeD for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,16 +40,10 @@ namespace Aspose.ThreeD.Cloud.SDK.Model
   {                       
         /// <summary>
         /// Gets or sets  of the SaveFormat.
-        /// </summary>  
-        [DataMember(Name="SaveFormat", EmitDefaultValue=false)] 
-        public SaveFormat SaveFormat { get; set; }
-		
-        /// <summary>
-        /// Allow user to handle how to manage the external dependencies during load/save.
-        /// </summary>  
-        [DataMember(Name="FileSystem", EmitDefaultValue=false)] 
-        public FileSystem FileSystem { get; set; }
-		
+        /// </summary>
+        [DataMember(Name="SaveFormat", EmitDefaultValue=false)]  
+        public SaveFormat? SaveFormat { get; set; }
+
         /// <summary>
         /// Some files like OBJ depends on external file, the lookup paths will allows Aspose.3D to look for external file to load
         /// </summary>  
@@ -69,12 +63,6 @@ namespace Aspose.ThreeD.Cloud.SDK.Model
         public string FileFormat { get; set; }
 		
         /// <summary>
-        /// Only for LocalFileSystem
-        /// </summary>  
-        [DataMember(Name="directory", EmitDefaultValue=false)] 
-        public string Directory { get; set; }
-		
-        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -83,11 +71,9 @@ namespace Aspose.ThreeD.Cloud.SDK.Model
           var sb = new StringBuilder();
           sb.Append("class SaveOptions {\n");
           sb.Append("  SaveFormat: ").Append(this.SaveFormat).Append("\n");
-          sb.Append("  FileSystem: ").Append(this.FileSystem).Append("\n");
           sb.Append("  LookupPaths: ").Append(this.LookupPaths).Append("\n");
           sb.Append("  FileName: ").Append(this.FileName).Append("\n");
           sb.Append("  FileFormat: ").Append(this.FileFormat).Append("\n");
-          sb.Append("  Directory: ").Append(this.Directory).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

@@ -9,7 +9,7 @@
  */
 
 using NUnit.Framework;
-using Aspose.ThreeD.Cloud.SDK.Api;
+using System.IO;
 using Aspose.ThreeD.Cloud.SDK.Model;
 using Newtonsoft.Json;
 using System.Collections.Generic;
@@ -35,7 +35,210 @@ namespace Aspose.ThreeD.Cloud.SDK.Test
         {
 
         }
+        /// <summary>
+        /// Test CopyFile
+        /// </summary>
+        [Test]
+        public void CopyFileTest()
+        {
+            string srcPath = @"3DTest\Aspose.pdf";//"export.pdf";//
+            string destPath = @"3DTest\Aspose.Net.pdf"; //"export.Net.pdf";//
+            string srcStorageName = null;
+            string destStorageName = null;
+            string versionId = null;
+            var response = threeDCloudApi.CopyFileWithHttpInfo(srcPath, destPath, srcStorageName, destStorageName, versionId);
+            Assert.AreEqual(response.StatusCode, 200);
+        }
 
+        /// <summary>
+        /// Test DeleteFile
+        /// </summary>
+        [Test]
+        public void DeleteFileTest()
+        {
+            string path = @"3DTest\Aspose3D.Net.pdf";
+            string storageName = "First Storage";
+            string versionId = null;
+            var response = threeDCloudApi.DeleteFileWithHttpInfo(path, storageName, versionId);
+            Assert.AreEqual(response.StatusCode, 200);
+        }
+
+        /// <summary>
+        /// Test DownloadFile
+        /// </summary>
+        [Test]
+        public void DownloadFileTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            string path = @"3DTest\Aspose.pdf";
+            string storageName = null;
+            string versionId = null;
+            var response = threeDCloudApi.DownloadFile(path, storageName, versionId);
+            Assert.IsInstanceOf<System.IO.Stream>(response, "response is System.IO.Stream");
+            string filename = @"E:\Cloud\src\csharp\testdata\threeD2.pdf";
+            StreamToFile(response, filename);
+        }
+
+        /// <summary>
+        /// Test MoveFile,the original file will be deleted
+        /// </summary>
+        [Test]
+        public void MoveFileTest()
+        {
+            string srcPath = @"3DTest\threeD2.pdf";
+            string destPath = @"3DTest\threeD.Move.pdf";
+            string srcStorageName = null;
+            string destStorageName = null;
+            string versionId = null;
+            var response = threeDCloudApi.MoveFileWithHttpInfo(srcPath, destPath, srcStorageName, destStorageName, versionId);
+            Assert.AreEqual(response.StatusCode, 200);
+        }
+
+        /// <summary>
+        /// Upload File stream to server 
+        /// </summary>
+        [Test]
+        public void UploadFileTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            string fileName = @"E:\Cloud\src\csharp\testdata\src2";//threeD.pdf
+            string path = @"3DTest";
+            System.IO.Stream file = null;
+            string storageName = null;
+            using (file = new FileStream(fileName, FileMode.OpenOrCreate, FileAccess.ReadWrite))
+            {
+                var response = threeDCloudApi.UploadFile(path, file, storageName);
+                Assert.IsInstanceOf<FilesUploadResult>(response, "response is FilesUploadResult");
+            }
+        }
+
+        public void StreamToFile(Stream stream, string fileName)
+        {
+            byte[] bytes = new byte[stream.Length];
+            stream.Read(bytes, 0, bytes.Length);
+            stream.Seek(0, SeekOrigin.Begin);
+            FileStream fs = new FileStream(fileName, FileMode.Create);
+            BinaryWriter bw = new BinaryWriter(fs);
+            bw.Write(bytes);
+            bw.Close();
+            fs.Close();
+        }
+
+
+        /// <summary>
+        /// Copy the folder and the files in which to the dest 
+        /// </summary>
+        [Test]
+        public void CopyFolderTest()
+        {
+            string srcPath = "3DTest";
+            string destPath = "3DTestCOPY";
+            string srcStorageName = null;
+            string destStorageName = null;
+            var response = threeDCloudApi.CopyFolderWithHttpInfo(srcPath, destPath, srcStorageName, destStorageName);
+            Assert.AreEqual(response.StatusCode, 200);
+        }
+
+        /// <summary>
+        /// Create a new folder,if the folder is exsits,it will rerurn ok.
+        /// </summary>
+        [Test]
+        public void CreateFolderTest()
+        {
+            string path = "3DTestCreateNew";
+            string storageName = null;
+            //folderApi.CreateFolder(path, storageName);
+            var response = threeDCloudApi.CreateFolderWithHttpInfo(path, storageName);
+            Assert.AreEqual(response.StatusCode, 200);
+        }
+
+        /// <summary>
+        /// Delete Folder, if the folder is not empty,it will rerurn error.
+        /// if the folder is not exsits which will still return the proper status code
+        /// </summary>
+        [Test]
+        public void DeleteFolderTest()
+        {
+            string path = "3DTestCreateNew";
+            string storageName = null;
+            //folderApi.CreateFolder(path, storageName);
+            var response = threeDCloudApi.DeleteFolderWithHttpInfo(path, storageName);
+            Assert.AreEqual(response.StatusCode, 200);
+        }
+
+        /// <summary>
+        /// Get the files list in the specified folder,if the folder is not exsits still return the proper status code
+        /// </summary>
+        [Test]
+        public void GetFilesListTest()
+        {
+            string path = "3DTestCOPY";
+            string storageName = null;
+            var response = threeDCloudApi.GetFilesList(path, storageName);
+            Assert.IsInstanceOf<FilesList>(response, "response is FilesList");
+        }
+
+        /// <summary>
+        /// Move all the files in srcPath to the destPath folder, and delete the srcPath folder
+        /// if the source folder is not exsits,the result still return the proper status code 
+        /// </summary>
+        [Test]
+        public void MoveFolderTest()
+        {
+            string srcPath = "3DTestCOPY";
+            string destPath = "3DTestDest";
+            string srcStorageName = null;
+            string destStorageName = null;
+            var response = threeDCloudApi.MoveFolderWithHttpInfo(srcPath, destPath, srcStorageName, destStorageName);
+            Assert.AreEqual(response.StatusCode, 200);
+        }
+        [Test]
+        public void GetDiscUsageTest()
+        {
+            string storageName = "First Storage";
+            var response = threeDCloudApi.GetDiscUsage(storageName);
+            Assert.IsInstanceOf<DiscUsage>(response, "response is DiscUsage");
+        }
+
+        /// <summary>
+        ///  Check wether the specified file or folder is FileVersions
+        /// </summary>
+        [Test]
+        public void GetFileVersionsTest()
+        {
+            string path = @"3DTest\Aspose.pdf";
+            string storageName = null;
+            var response = threeDCloudApi.GetFileVersions(path, storageName);
+            Assert.IsInstanceOf<FileVersions>(response, "response is FileVersions");
+        }
+
+        /// <summary>
+        ///  Check wether the specified object is exists or not
+        /// </summary>
+        [Test]
+        public void ObjectExistsTest()
+        {
+            string path = @"3DTest\Empty.pdf";
+            string storageName = null;
+            string versionId = null;
+            var response = threeDCloudApi.ObjectExists(path, storageName, versionId);
+            Assert.IsInstanceOf<ObjectExist>(response, "response is ObjectExists");
+            Assert.True(response.Exists);
+            Assert.False(response.IsFolder);
+        }
+
+        /// <summary>
+        /// Check wether the specified storage is exists or not
+        /// </summary>
+        [Test]
+        public void StorageExistsTest()
+        {
+            /* NOTE: here storageName can not be null*/
+            string storageName = "First Storage";/*here can not be null*/
+            var response = threeDCloudApi.StorageExists(storageName);
+            Assert.IsInstanceOf<StorageExist>(response, "response is StorageExist");
+            Assert.True(response.Exists);
+        }
         /// <summary>
         /// Delete object from scene
         /// Delete nodes that has a Camera or Light attached, nodes are addressed by Object Addressing Path
@@ -43,7 +246,7 @@ namespace Aspose.ThreeD.Cloud.SDK.Test
         [Test]
         public void DeleteNodesTest()
         {
-            const string name = "oaptest.pdf";
+            const string name = "Aspose.pdf";
             const string objectaddressingpath = "//*[(@Type = 'Camera') or (@Name = 'light')]";
             const string folder = "3DTest";
             string storage = "First Storage";
@@ -77,8 +280,6 @@ namespace Aspose.ThreeD.Cloud.SDK.Test
             PlySaveOption saveopt = new PlySaveOption();
             /* SaveFormat must be assigned*/
             saveopt.SaveFormat = SaveFormat.PLY;
-            saveopt.FileSystem = new FileSystem();
-            saveopt.FileSystem.FileSystemType = FileSystemType.MemoryFileSystem;
             List<string> positionComponents = new List<string>();
             positionComponents.Add("x"); positionComponents.Add("y"); positionComponents.Add("z");
             saveopt.PositionComponents = positionComponents;

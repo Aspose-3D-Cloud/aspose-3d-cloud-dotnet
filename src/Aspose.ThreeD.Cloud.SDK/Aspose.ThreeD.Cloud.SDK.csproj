@@ -54,7 +54,58 @@ OpenAPI spec version: 3.0
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="**\*.cs" Exclude="obj\**" />
+    <Compile Include="Api\OAuthApi.cs" />
+    <Compile Include="Api\ThreeDCloudApi.cs" />
+    <Compile Include="Client\ApiClient.cs" />
+    <Compile Include="Client\ApiException.cs" />
+    <Compile Include="Client\ApiResponse.cs" />
+    <Compile Include="Client\Configuration.cs" />
+    <Compile Include="Client\ExceptionFactory.cs" />
+    <Compile Include="Client\GlobalConfiguration.cs" />
+    <Compile Include="Client\IApiAccessor.cs" />
+    <Compile Include="Client\IReadableConfiguration.cs" />
+    <Compile Include="Client\SwaggerDateConverter.cs" />
+    <Compile Include="Model\AccessTokenResponse.cs" />
+    <Compile Include="Model\AMFSaveOption.cs" />
+    <Compile Include="Model\Box.cs" />
+    <Compile Include="Model\ColladaSaveOption.cs" />
+    <Compile Include="Model\ColladaTransformStyle.cs" />
+    <Compile Include="Model\Cylinder.cs" />
+    <Compile Include="Model\Discreet3DSSaveOption.cs" />
+    <Compile Include="Model\DiscUsage.cs" />
+    <Compile Include="Model\DracoCompressionLevel.cs" />
+    <Compile Include="Model\DracoSaveOption.cs" />
+    <Compile Include="Model\Entity.cs" />
+    <Compile Include="Model\Error.cs" />
+    <Compile Include="Model\ErrorDetails.cs" />
+    <Compile Include="Model\FBXSaveOption.cs" />
+    <Compile Include="Model\FileContentType.cs" />
+    <Compile Include="Model\FilesList.cs" />
+    <Compile Include="Model\FilesUploadResult.cs" />
+    <Compile Include="Model\FileVersion.cs" />
+    <Compile Include="Model\FileVersions.cs" />
+    <Compile Include="Model\GLTFSaveOption.cs" />
+    <Compile Include="Model\HTMLSaveOption.cs" />
+    <Compile Include="Model\ModelData.cs" />
+    <Compile Include="Model\ObjectExist.cs" />
+    <Compile Include="Model\ObjSaveOption.cs" />
+    <Compile Include="Model\PdfLightingScheme.cs" />
+    <Compile Include="Model\PdfRenderMode.cs" />
+    <Compile Include="Model\PdfSaveOption.cs" />
+    <Compile Include="Model\Plane.cs" />
+    <Compile Include="Model\PlySaveOption.cs" />
+    <Compile Include="Model\RvmSaveOption.cs" />
+    <Compile Include="Model\SaveFormat.cs" />
+    <Compile Include="Model\SaveOptions.cs" />
+    <Compile Include="Model\Sphere.cs" />
+    <Compile Include="Model\STLSaveOption.cs" />
+    <Compile Include="Model\StorageExist.cs" />
+    <Compile Include="Model\StorageFile.cs" />
+    <Compile Include="Model\Torus.cs" />
+    <Compile Include="Model\Transform.cs" />
+    <Compile Include="Model\U3DSaveOption.cs" />
+    <Compile Include="Model\Vector3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

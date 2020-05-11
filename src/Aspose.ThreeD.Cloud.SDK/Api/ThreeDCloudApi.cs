@@ -25,6 +25,135 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Copy file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="srcPath">Source file path e.g. &#39;/folder/file.ext&#39;</param>
+        /// <param name="destPath">Destination file path</param>
+        /// <param name="srcStorageName">Source storage name (optional)</param>
+        /// <param name="destStorageName">Destination storage name (optional)</param>
+        /// <param name="versionId">File version ID to copy (optional)</param>
+        /// <returns></returns>
+        void CopyFile (string srcPath, string destPath, string srcStorageName = null, string destStorageName = null, string versionId = null);
+
+        /// <summary>
+        /// Copy file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="srcPath">Source file path e.g. &#39;/folder/file.ext&#39;</param>
+        /// <param name="destPath">Destination file path</param>
+        /// <param name="srcStorageName">Source storage name (optional)</param>
+        /// <param name="destStorageName">Destination storage name (optional)</param>
+        /// <param name="versionId">File version ID to copy (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> CopyFileWithHttpInfo (string srcPath, string destPath, string srcStorageName = null, string destStorageName = null, string versionId = null);
+        /// <summary>
+        /// Copy folder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="srcPath">Source folder path e.g. &#39;/src&#39;</param>
+        /// <param name="destPath">Destination folder path e.g. &#39;/dst&#39;</param>
+        /// <param name="srcStorageName">Source storage name (optional)</param>
+        /// <param name="destStorageName">Destination storage name (optional)</param>
+        /// <returns></returns>
+        void CopyFolder (string srcPath, string destPath, string srcStorageName = null, string destStorageName = null);
+
+        /// <summary>
+        /// Copy folder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="srcPath">Source folder path e.g. &#39;/src&#39;</param>
+        /// <param name="destPath">Destination folder path e.g. &#39;/dst&#39;</param>
+        /// <param name="srcStorageName">Source storage name (optional)</param>
+        /// <param name="destStorageName">Destination storage name (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> CopyFolderWithHttpInfo (string srcPath, string destPath, string srcStorageName = null, string destStorageName = null);
+        /// <summary>
+        /// Create the folder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Folder path to create e.g. &#39;folder_1/folder_2/&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns></returns>
+        void CreateFolder (string path, string storageName = null);
+
+        /// <summary>
+        /// Create the folder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Folder path to create e.g. &#39;folder_1/folder_2/&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> CreateFolderWithHttpInfo (string path, string storageName = null);
+        /// <summary>
+        /// Delete file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">File path e.g. &#39;/folder/file.ext&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <param name="versionId">File version ID to delete (optional)</param>
+        /// <returns></returns>
+        void DeleteFile (string path, string storageName = null, string versionId = null);
+
+        /// <summary>
+        /// Delete file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">File path e.g. &#39;/folder/file.ext&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <param name="versionId">File version ID to delete (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteFileWithHttpInfo (string path, string storageName = null, string versionId = null);
+        /// <summary>
+        /// Delete folder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Folder path e.g. &#39;/folder&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <param name="recursive">Enable to delete folders, subfolders and files (optional, default to false)</param>
+        /// <returns></returns>
+        void DeleteFolder (string path, string storageName = null, bool? recursive = null);
+
+        /// <summary>
+        /// Delete folder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Folder path e.g. &#39;/folder&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <param name="recursive">Enable to delete folders, subfolders and files (optional, default to false)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteFolderWithHttpInfo (string path, string storageName = null, bool? recursive = null);
+        /// <summary>
         /// Delete nodes from scene,nodes are addressed by Object Addressing Path
         /// </summary>
         /// <remarks>
@@ -51,6 +180,204 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
         /// <param name="storage">The storage type (optional)</param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
         ApiResponse<System.IO.Stream> DeleteNodesWithHttpInfo (string name, string objectaddressingpath, string folder = null, string storage = null);
+        /// <summary>
+        /// Download file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">File path e.g. &#39;/folder/file.ext&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <param name="versionId">File version ID to download (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream DownloadFile (string path, string storageName = null, string versionId = null);
+
+        /// <summary>
+        /// Download file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">File path e.g. &#39;/folder/file.ext&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <param name="versionId">File version ID to download (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> DownloadFileWithHttpInfo (string path, string storageName = null, string versionId = null);
+        /// <summary>
+        /// Get disc usage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>DiscUsage</returns>
+        DiscUsage GetDiscUsage (string storageName = null);
+
+        /// <summary>
+        /// Get disc usage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>ApiResponse of DiscUsage</returns>
+        ApiResponse<DiscUsage> GetDiscUsageWithHttpInfo (string storageName = null);
+        /// <summary>
+        /// Get file versions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">File path e.g. &#39;/file.ext&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>FileVersions</returns>
+        FileVersions GetFileVersions (string path, string storageName = null);
+
+        /// <summary>
+        /// Get file versions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">File path e.g. &#39;/file.ext&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>ApiResponse of FileVersions</returns>
+        ApiResponse<FileVersions> GetFileVersionsWithHttpInfo (string path, string storageName = null);
+        /// <summary>
+        /// Get all files and folders within a folder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Folder path e.g. &#39;/folder&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>FilesList</returns>
+        FilesList GetFilesList (string path, string storageName = null);
+
+        /// <summary>
+        /// Get all files and folders within a folder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Folder path e.g. &#39;/folder&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>ApiResponse of FilesList</returns>
+        ApiResponse<FilesList> GetFilesListWithHttpInfo (string path, string storageName = null);
+        /// <summary>
+        /// Move file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="srcPath">Source file path e.g. &#39;/src.ext&#39;</param>
+        /// <param name="destPath">Destination file path e.g. &#39;/dest.ext&#39;</param>
+        /// <param name="srcStorageName">Source storage name (optional)</param>
+        /// <param name="destStorageName">Destination storage name (optional)</param>
+        /// <param name="versionId">File version ID to move (optional)</param>
+        /// <returns></returns>
+        void MoveFile (string srcPath, string destPath, string srcStorageName = null, string destStorageName = null, string versionId = null);
+
+        /// <summary>
+        /// Move file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="srcPath">Source file path e.g. &#39;/src.ext&#39;</param>
+        /// <param name="destPath">Destination file path e.g. &#39;/dest.ext&#39;</param>
+        /// <param name="srcStorageName">Source storage name (optional)</param>
+        /// <param name="destStorageName">Destination storage name (optional)</param>
+        /// <param name="versionId">File version ID to move (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> MoveFileWithHttpInfo (string srcPath, string destPath, string srcStorageName = null, string destStorageName = null, string versionId = null);
+        /// <summary>
+        /// Move folder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="srcPath">Folder path to move e.g. &#39;/folder&#39;</param>
+        /// <param name="destPath">Destination folder path to move to e.g &#39;/dst&#39;</param>
+        /// <param name="srcStorageName">Source storage name (optional)</param>
+        /// <param name="destStorageName">Destination storage name (optional)</param>
+        /// <returns></returns>
+        void MoveFolder (string srcPath, string destPath, string srcStorageName = null, string destStorageName = null);
+
+        /// <summary>
+        /// Move folder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="srcPath">Folder path to move e.g. &#39;/folder&#39;</param>
+        /// <param name="destPath">Destination folder path to move to e.g &#39;/dst&#39;</param>
+        /// <param name="srcStorageName">Source storage name (optional)</param>
+        /// <param name="destStorageName">Destination storage name (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> MoveFolderWithHttpInfo (string srcPath, string destPath, string srcStorageName = null, string destStorageName = null);
+        /// <summary>
+        /// Get Access token
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="grantType">Grant Type</param>
+        /// <param name="clientId">App SID</param>
+        /// <param name="clientSecret">App Key</param>
+        /// <returns>AccessTokenResponse</returns>
+        AccessTokenResponse OAuthPost (string grantType, string clientId, string clientSecret);
+
+        /// <summary>
+        /// Get Access token
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="grantType">Grant Type</param>
+        /// <param name="clientId">App SID</param>
+        /// <param name="clientSecret">App Key</param>
+        /// <returns>ApiResponse of AccessTokenResponse</returns>
+        ApiResponse<AccessTokenResponse> OAuthPostWithHttpInfo (string grantType, string clientId, string clientSecret);
+        /// <summary>
+        /// Check if file or folder exists
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">File or folder path e.g. &#39;/file.ext&#39; or &#39;/folder&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <param name="versionId">File version ID (optional)</param>
+        /// <returns>ObjectExist</returns>
+        ObjectExist ObjectExists (string path, string storageName = null, string versionId = null);
+
+        /// <summary>
+        /// Check if file or folder exists
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">File or folder path e.g. &#39;/file.ext&#39; or &#39;/folder&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <param name="versionId">File version ID (optional)</param>
+        /// <returns>ApiResponse of ObjectExist</returns>
+        ApiResponse<ObjectExist> ObjectExistsWithHttpInfo (string path, string storageName = null, string versionId = null);
         /// <summary>
         /// Convert file on server to other formats with fileformat parameter             
         /// </summary>
@@ -135,7 +462,7 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
         /// <returns>ApiResponse of System.IO.Stream</returns>
         ApiResponse<System.IO.Stream> PostCreateWithHttpInfo (string format);
         /// <summary>
-        /// Parametric Modeling�� Create a Entity with size and located in ...
+        /// Parametric Modeling, Create a Entity with size and located in ...
         /// </summary>
         /// <remarks>
         /// 
@@ -150,7 +477,7 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
         System.IO.Stream PostModel (string name, ModelData modeldata, string newformat = null, string folder = null, string storage = null);
 
         /// <summary>
-        /// Parametric Modeling�� Create a Entity with size and located in ...
+        /// Parametric Modeling, Create a Entity with size and located in ...
         /// </summary>
         /// <remarks>
         /// 
@@ -310,8 +637,214 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
         /// <param name="storage">The storage type (optional)</param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
         ApiResponse<System.IO.Stream> PostTriangulateOriginalWithHttpInfo (string name, string folder = null, string storage = null);
+        /// <summary>
+        /// Triangulate part of the scene(Specified by OAP) and save the scene to different file 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The file&#39;s mame</param>
+        /// <param name="objectaddressingpath">The node or mesh getted by OAP.</param>
+        /// <param name="newfilename">The new file&#39;s mame</param>
+        /// <param name="newformat">The new file&#39;s format</param>
+        /// <param name="folder">The folder for source file (optional)</param>
+        /// <param name="storage">The storage type (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream PostTriangulatePart (string name, string objectaddressingpath, string newfilename, string newformat, string folder = null, string storage = null);
+
+        /// <summary>
+        /// Triangulate part of the scene(Specified by OAP) and save the scene to different file 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The file&#39;s mame</param>
+        /// <param name="objectaddressingpath">The node or mesh getted by OAP.</param>
+        /// <param name="newfilename">The new file&#39;s mame</param>
+        /// <param name="newformat">The new file&#39;s format</param>
+        /// <param name="folder">The folder for source file (optional)</param>
+        /// <param name="storage">The storage type (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> PostTriangulatePartWithHttpInfo (string name, string objectaddressingpath, string newfilename, string newformat, string folder = null, string storage = null);
+        /// <summary>
+        /// Check if storage exists
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageName">Storage name</param>
+        /// <returns>StorageExist</returns>
+        StorageExist StorageExists (string storageName);
+
+        /// <summary>
+        /// Check if storage exists
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageName">Storage name</param>
+        /// <returns>ApiResponse of StorageExist</returns>
+        ApiResponse<StorageExist> StorageExistsWithHttpInfo (string storageName);
+        /// <summary>
+        /// Upload file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.             </param>
+        /// <param name="_file">File to upload</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>FilesUploadResult</returns>
+        FilesUploadResult UploadFile (string path, System.IO.Stream _file, string storageName = null);
+
+        /// <summary>
+        /// Upload file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.             </param>
+        /// <param name="_file">File to upload</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>ApiResponse of FilesUploadResult</returns>
+        ApiResponse<FilesUploadResult> UploadFileWithHttpInfo (string path, System.IO.Stream _file, string storageName = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Copy file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="srcPath">Source file path e.g. &#39;/folder/file.ext&#39;</param>
+        /// <param name="destPath">Destination file path</param>
+        /// <param name="srcStorageName">Source storage name (optional)</param>
+        /// <param name="destStorageName">Destination storage name (optional)</param>
+        /// <param name="versionId">File version ID to copy (optional)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task CopyFileAsync (string srcPath, string destPath, string srcStorageName = null, string destStorageName = null, string versionId = null);
+
+        /// <summary>
+        /// Copy file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="srcPath">Source file path e.g. &#39;/folder/file.ext&#39;</param>
+        /// <param name="destPath">Destination file path</param>
+        /// <param name="srcStorageName">Source storage name (optional)</param>
+        /// <param name="destStorageName">Destination storage name (optional)</param>
+        /// <param name="versionId">File version ID to copy (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> CopyFileAsyncWithHttpInfo (string srcPath, string destPath, string srcStorageName = null, string destStorageName = null, string versionId = null);
+        /// <summary>
+        /// Copy folder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="srcPath">Source folder path e.g. &#39;/src&#39;</param>
+        /// <param name="destPath">Destination folder path e.g. &#39;/dst&#39;</param>
+        /// <param name="srcStorageName">Source storage name (optional)</param>
+        /// <param name="destStorageName">Destination storage name (optional)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task CopyFolderAsync (string srcPath, string destPath, string srcStorageName = null, string destStorageName = null);
+
+        /// <summary>
+        /// Copy folder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="srcPath">Source folder path e.g. &#39;/src&#39;</param>
+        /// <param name="destPath">Destination folder path e.g. &#39;/dst&#39;</param>
+        /// <param name="srcStorageName">Source storage name (optional)</param>
+        /// <param name="destStorageName">Destination storage name (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> CopyFolderAsyncWithHttpInfo (string srcPath, string destPath, string srcStorageName = null, string destStorageName = null);
+        /// <summary>
+        /// Create the folder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Folder path to create e.g. &#39;folder_1/folder_2/&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task CreateFolderAsync (string path, string storageName = null);
+
+        /// <summary>
+        /// Create the folder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Folder path to create e.g. &#39;folder_1/folder_2/&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> CreateFolderAsyncWithHttpInfo (string path, string storageName = null);
+        /// <summary>
+        /// Delete file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">File path e.g. &#39;/folder/file.ext&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <param name="versionId">File version ID to delete (optional)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteFileAsync (string path, string storageName = null, string versionId = null);
+
+        /// <summary>
+        /// Delete file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">File path e.g. &#39;/folder/file.ext&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <param name="versionId">File version ID to delete (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFileAsyncWithHttpInfo (string path, string storageName = null, string versionId = null);
+        /// <summary>
+        /// Delete folder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Folder path e.g. &#39;/folder&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <param name="recursive">Enable to delete folders, subfolders and files (optional, default to false)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteFolderAsync (string path, string storageName = null, bool? recursive = null);
+
+        /// <summary>
+        /// Delete folder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Folder path e.g. &#39;/folder&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <param name="recursive">Enable to delete folders, subfolders and files (optional, default to false)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFolderAsyncWithHttpInfo (string path, string storageName = null, bool? recursive = null);
         /// <summary>
         /// Delete nodes from scene,nodes are addressed by Object Addressing Path
         /// </summary>
@@ -339,6 +872,204 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
         /// <param name="storage">The storage type (optional)</param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
         System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> DeleteNodesAsyncWithHttpInfo (string name, string objectaddressingpath, string folder = null, string storage = null);
+        /// <summary>
+        /// Download file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">File path e.g. &#39;/folder/file.ext&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <param name="versionId">File version ID to download (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> DownloadFileAsync (string path, string storageName = null, string versionId = null);
+
+        /// <summary>
+        /// Download file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">File path e.g. &#39;/folder/file.ext&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <param name="versionId">File version ID to download (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> DownloadFileAsyncWithHttpInfo (string path, string storageName = null, string versionId = null);
+        /// <summary>
+        /// Get disc usage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>Task of DiscUsage</returns>
+        System.Threading.Tasks.Task<DiscUsage> GetDiscUsageAsync (string storageName = null);
+
+        /// <summary>
+        /// Get disc usage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>Task of ApiResponse (DiscUsage)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DiscUsage>> GetDiscUsageAsyncWithHttpInfo (string storageName = null);
+        /// <summary>
+        /// Get file versions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">File path e.g. &#39;/file.ext&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>Task of FileVersions</returns>
+        System.Threading.Tasks.Task<FileVersions> GetFileVersionsAsync (string path, string storageName = null);
+
+        /// <summary>
+        /// Get file versions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">File path e.g. &#39;/file.ext&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>Task of ApiResponse (FileVersions)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FileVersions>> GetFileVersionsAsyncWithHttpInfo (string path, string storageName = null);
+        /// <summary>
+        /// Get all files and folders within a folder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Folder path e.g. &#39;/folder&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>Task of FilesList</returns>
+        System.Threading.Tasks.Task<FilesList> GetFilesListAsync (string path, string storageName = null);
+
+        /// <summary>
+        /// Get all files and folders within a folder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Folder path e.g. &#39;/folder&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>Task of ApiResponse (FilesList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FilesList>> GetFilesListAsyncWithHttpInfo (string path, string storageName = null);
+        /// <summary>
+        /// Move file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="srcPath">Source file path e.g. &#39;/src.ext&#39;</param>
+        /// <param name="destPath">Destination file path e.g. &#39;/dest.ext&#39;</param>
+        /// <param name="srcStorageName">Source storage name (optional)</param>
+        /// <param name="destStorageName">Destination storage name (optional)</param>
+        /// <param name="versionId">File version ID to move (optional)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task MoveFileAsync (string srcPath, string destPath, string srcStorageName = null, string destStorageName = null, string versionId = null);
+
+        /// <summary>
+        /// Move file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="srcPath">Source file path e.g. &#39;/src.ext&#39;</param>
+        /// <param name="destPath">Destination file path e.g. &#39;/dest.ext&#39;</param>
+        /// <param name="srcStorageName">Source storage name (optional)</param>
+        /// <param name="destStorageName">Destination storage name (optional)</param>
+        /// <param name="versionId">File version ID to move (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> MoveFileAsyncWithHttpInfo (string srcPath, string destPath, string srcStorageName = null, string destStorageName = null, string versionId = null);
+        /// <summary>
+        /// Move folder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="srcPath">Folder path to move e.g. &#39;/folder&#39;</param>
+        /// <param name="destPath">Destination folder path to move to e.g &#39;/dst&#39;</param>
+        /// <param name="srcStorageName">Source storage name (optional)</param>
+        /// <param name="destStorageName">Destination storage name (optional)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task MoveFolderAsync (string srcPath, string destPath, string srcStorageName = null, string destStorageName = null);
+
+        /// <summary>
+        /// Move folder
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="srcPath">Folder path to move e.g. &#39;/folder&#39;</param>
+        /// <param name="destPath">Destination folder path to move to e.g &#39;/dst&#39;</param>
+        /// <param name="srcStorageName">Source storage name (optional)</param>
+        /// <param name="destStorageName">Destination storage name (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> MoveFolderAsyncWithHttpInfo (string srcPath, string destPath, string srcStorageName = null, string destStorageName = null);
+        /// <summary>
+        /// Get Access token
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="grantType">Grant Type</param>
+        /// <param name="clientId">App SID</param>
+        /// <param name="clientSecret">App Key</param>
+        /// <returns>Task of AccessTokenResponse</returns>
+        System.Threading.Tasks.Task<AccessTokenResponse> OAuthPostAsync (string grantType, string clientId, string clientSecret);
+
+        /// <summary>
+        /// Get Access token
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="grantType">Grant Type</param>
+        /// <param name="clientId">App SID</param>
+        /// <param name="clientSecret">App Key</param>
+        /// <returns>Task of ApiResponse (AccessTokenResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AccessTokenResponse>> OAuthPostAsyncWithHttpInfo (string grantType, string clientId, string clientSecret);
+        /// <summary>
+        /// Check if file or folder exists
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">File or folder path e.g. &#39;/file.ext&#39; or &#39;/folder&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <param name="versionId">File version ID (optional)</param>
+        /// <returns>Task of ObjectExist</returns>
+        System.Threading.Tasks.Task<ObjectExist> ObjectExistsAsync (string path, string storageName = null, string versionId = null);
+
+        /// <summary>
+        /// Check if file or folder exists
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">File or folder path e.g. &#39;/file.ext&#39; or &#39;/folder&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <param name="versionId">File version ID (optional)</param>
+        /// <returns>Task of ApiResponse (ObjectExist)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ObjectExist>> ObjectExistsAsyncWithHttpInfo (string path, string storageName = null, string versionId = null);
         /// <summary>
         /// Convert file on server to other formats with fileformat parameter             
         /// </summary>
@@ -423,7 +1154,7 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
         System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PostCreateAsyncWithHttpInfo (string format);
         /// <summary>
-        /// Parametric Modeling�� Create a Entity with size and located in ...
+        /// Parametric Modeling, Create a Entity with size and located in ...
         /// </summary>
         /// <remarks>
         /// 
@@ -438,7 +1169,7 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
         System.Threading.Tasks.Task<System.IO.Stream> PostModelAsync (string name, ModelData modeldata, string newformat = null, string folder = null, string storage = null);
 
         /// <summary>
-        /// Parametric Modeling�� Create a Entity with size and located in ...
+        /// Parametric Modeling, Create a Entity with size and located in ...
         /// </summary>
         /// <remarks>
         /// 
@@ -598,6 +1329,83 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
         /// <param name="storage">The storage type (optional)</param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
         System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PostTriangulateOriginalAsyncWithHttpInfo (string name, string folder = null, string storage = null);
+        /// <summary>
+        /// Triangulate part of the scene(Specified by OAP) and save the scene to different file 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The file&#39;s mame</param>
+        /// <param name="objectaddressingpath">The node or mesh getted by OAP.</param>
+        /// <param name="newfilename">The new file&#39;s mame</param>
+        /// <param name="newformat">The new file&#39;s format</param>
+        /// <param name="folder">The folder for source file (optional)</param>
+        /// <param name="storage">The storage type (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> PostTriangulatePartAsync (string name, string objectaddressingpath, string newfilename, string newformat, string folder = null, string storage = null);
+
+        /// <summary>
+        /// Triangulate part of the scene(Specified by OAP) and save the scene to different file 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The file&#39;s mame</param>
+        /// <param name="objectaddressingpath">The node or mesh getted by OAP.</param>
+        /// <param name="newfilename">The new file&#39;s mame</param>
+        /// <param name="newformat">The new file&#39;s format</param>
+        /// <param name="folder">The folder for source file (optional)</param>
+        /// <param name="storage">The storage type (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PostTriangulatePartAsyncWithHttpInfo (string name, string objectaddressingpath, string newfilename, string newformat, string folder = null, string storage = null);
+        /// <summary>
+        /// Check if storage exists
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageName">Storage name</param>
+        /// <returns>Task of StorageExist</returns>
+        System.Threading.Tasks.Task<StorageExist> StorageExistsAsync (string storageName);
+
+        /// <summary>
+        /// Check if storage exists
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageName">Storage name</param>
+        /// <returns>Task of ApiResponse (StorageExist)</returns>
+        System.Threading.Tasks.Task<ApiResponse<StorageExist>> StorageExistsAsyncWithHttpInfo (string storageName);
+        /// <summary>
+        /// Upload file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.             </param>
+        /// <param name="_file">File to upload</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>Task of FilesUploadResult</returns>
+        System.Threading.Tasks.Task<FilesUploadResult> UploadFileAsync (string path, System.IO.Stream _file, string storageName = null);
+
+        /// <summary>
+        /// Upload file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.             </param>
+        /// <param name="_file">File to upload</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>Task of ApiResponse (FilesUploadResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FilesUploadResult>> UploadFileAsyncWithHttpInfo (string path, System.IO.Stream _file, string storageName = null);
         #endregion Asynchronous Operations
     }
 
@@ -752,6 +1560,815 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
         }
 
         /// <summary>
+        /// Copy file 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="srcPath">Source file path e.g. &#39;/folder/file.ext&#39;</param>
+        /// <param name="destPath">Destination file path</param>
+        /// <param name="srcStorageName">Source storage name (optional)</param>
+        /// <param name="destStorageName">Destination storage name (optional)</param>
+        /// <param name="versionId">File version ID to copy (optional)</param>
+        /// <returns></returns>
+        public void CopyFile (string srcPath, string destPath, string srcStorageName = null, string destStorageName = null, string versionId = null)
+        {
+             CopyFileWithHttpInfo(srcPath, destPath, srcStorageName, destStorageName, versionId);
+        }
+
+        /// <summary>
+        /// Copy file 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="srcPath">Source file path e.g. &#39;/folder/file.ext&#39;</param>
+        /// <param name="destPath">Destination file path</param>
+        /// <param name="srcStorageName">Source storage name (optional)</param>
+        /// <param name="destStorageName">Destination storage name (optional)</param>
+        /// <param name="versionId">File version ID to copy (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> CopyFileWithHttpInfo (string srcPath, string destPath, string srcStorageName = null, string destStorageName = null, string versionId = null)
+        {
+            // verify the required parameter 'srcPath' is set
+            if (srcPath == null)
+                throw new ApiException(400, "Missing required parameter 'srcPath' when calling ThreeDCloudApi->CopyFile");
+            // verify the required parameter 'destPath' is set
+            if (destPath == null)
+                throw new ApiException(400, "Missing required parameter 'destPath' when calling ThreeDCloudApi->CopyFile");
+
+            var localVarPath = "/3d/storage/file/copy/{srcPath}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (srcPath != null) localVarPathParams.Add("srcPath", Configuration.ApiClient.ParameterToString(srcPath)); // path parameter
+            if (destPath != null) localVarQueryParams.Add("destPath", Configuration.ApiClient.ParameterToString(destPath)); // query parameter
+            if (srcStorageName != null) localVarQueryParams.Add("srcStorageName", Configuration.ApiClient.ParameterToString(srcStorageName)); // query parameter
+            if (destStorageName != null) localVarQueryParams.Add("destStorageName", Configuration.ApiClient.ParameterToString(destStorageName)); // query parameter
+            if (versionId != null) localVarQueryParams.Add("versionId", Configuration.ApiClient.ParameterToString(versionId)); // query parameter
+
+            // authentication (JWT) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CopyFile", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Copy file 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="srcPath">Source file path e.g. &#39;/folder/file.ext&#39;</param>
+        /// <param name="destPath">Destination file path</param>
+        /// <param name="srcStorageName">Source storage name (optional)</param>
+        /// <param name="destStorageName">Destination storage name (optional)</param>
+        /// <param name="versionId">File version ID to copy (optional)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task CopyFileAsync (string srcPath, string destPath, string srcStorageName = null, string destStorageName = null, string versionId = null)
+        {
+             await CopyFileAsyncWithHttpInfo(srcPath, destPath, srcStorageName, destStorageName, versionId);
+
+        }
+
+        /// <summary>
+        /// Copy file 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="srcPath">Source file path e.g. &#39;/folder/file.ext&#39;</param>
+        /// <param name="destPath">Destination file path</param>
+        /// <param name="srcStorageName">Source storage name (optional)</param>
+        /// <param name="destStorageName">Destination storage name (optional)</param>
+        /// <param name="versionId">File version ID to copy (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CopyFileAsyncWithHttpInfo (string srcPath, string destPath, string srcStorageName = null, string destStorageName = null, string versionId = null)
+        {
+            // verify the required parameter 'srcPath' is set
+            if (srcPath == null)
+                throw new ApiException(400, "Missing required parameter 'srcPath' when calling ThreeDCloudApi->CopyFile");
+            // verify the required parameter 'destPath' is set
+            if (destPath == null)
+                throw new ApiException(400, "Missing required parameter 'destPath' when calling ThreeDCloudApi->CopyFile");
+
+            var localVarPath = "/3d/storage/file/copy/{srcPath}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (srcPath != null) localVarPathParams.Add("srcPath", Configuration.ApiClient.ParameterToString(srcPath)); // path parameter
+            if (destPath != null) localVarQueryParams.Add("destPath", Configuration.ApiClient.ParameterToString(destPath)); // query parameter
+            if (srcStorageName != null) localVarQueryParams.Add("srcStorageName", Configuration.ApiClient.ParameterToString(srcStorageName)); // query parameter
+            if (destStorageName != null) localVarQueryParams.Add("destStorageName", Configuration.ApiClient.ParameterToString(destStorageName)); // query parameter
+            if (versionId != null) localVarQueryParams.Add("versionId", Configuration.ApiClient.ParameterToString(versionId)); // query parameter
+
+            // authentication (JWT) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CopyFile", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Copy folder 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="srcPath">Source folder path e.g. &#39;/src&#39;</param>
+        /// <param name="destPath">Destination folder path e.g. &#39;/dst&#39;</param>
+        /// <param name="srcStorageName">Source storage name (optional)</param>
+        /// <param name="destStorageName">Destination storage name (optional)</param>
+        /// <returns></returns>
+        public void CopyFolder (string srcPath, string destPath, string srcStorageName = null, string destStorageName = null)
+        {
+             CopyFolderWithHttpInfo(srcPath, destPath, srcStorageName, destStorageName);
+        }
+
+        /// <summary>
+        /// Copy folder 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="srcPath">Source folder path e.g. &#39;/src&#39;</param>
+        /// <param name="destPath">Destination folder path e.g. &#39;/dst&#39;</param>
+        /// <param name="srcStorageName">Source storage name (optional)</param>
+        /// <param name="destStorageName">Destination storage name (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> CopyFolderWithHttpInfo (string srcPath, string destPath, string srcStorageName = null, string destStorageName = null)
+        {
+            // verify the required parameter 'srcPath' is set
+            if (srcPath == null)
+                throw new ApiException(400, "Missing required parameter 'srcPath' when calling ThreeDCloudApi->CopyFolder");
+            // verify the required parameter 'destPath' is set
+            if (destPath == null)
+                throw new ApiException(400, "Missing required parameter 'destPath' when calling ThreeDCloudApi->CopyFolder");
+
+            var localVarPath = "/3d/storage/folder/copy/{srcPath}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (srcPath != null) localVarPathParams.Add("srcPath", Configuration.ApiClient.ParameterToString(srcPath)); // path parameter
+            if (destPath != null) localVarQueryParams.Add("destPath", Configuration.ApiClient.ParameterToString(destPath)); // query parameter
+            if (srcStorageName != null) localVarQueryParams.Add("srcStorageName", Configuration.ApiClient.ParameterToString(srcStorageName)); // query parameter
+            if (destStorageName != null) localVarQueryParams.Add("destStorageName", Configuration.ApiClient.ParameterToString(destStorageName)); // query parameter
+
+            // authentication (JWT) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CopyFolder", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Copy folder 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="srcPath">Source folder path e.g. &#39;/src&#39;</param>
+        /// <param name="destPath">Destination folder path e.g. &#39;/dst&#39;</param>
+        /// <param name="srcStorageName">Source storage name (optional)</param>
+        /// <param name="destStorageName">Destination storage name (optional)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task CopyFolderAsync (string srcPath, string destPath, string srcStorageName = null, string destStorageName = null)
+        {
+             await CopyFolderAsyncWithHttpInfo(srcPath, destPath, srcStorageName, destStorageName);
+
+        }
+
+        /// <summary>
+        /// Copy folder 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="srcPath">Source folder path e.g. &#39;/src&#39;</param>
+        /// <param name="destPath">Destination folder path e.g. &#39;/dst&#39;</param>
+        /// <param name="srcStorageName">Source storage name (optional)</param>
+        /// <param name="destStorageName">Destination storage name (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CopyFolderAsyncWithHttpInfo (string srcPath, string destPath, string srcStorageName = null, string destStorageName = null)
+        {
+            // verify the required parameter 'srcPath' is set
+            if (srcPath == null)
+                throw new ApiException(400, "Missing required parameter 'srcPath' when calling ThreeDCloudApi->CopyFolder");
+            // verify the required parameter 'destPath' is set
+            if (destPath == null)
+                throw new ApiException(400, "Missing required parameter 'destPath' when calling ThreeDCloudApi->CopyFolder");
+
+            var localVarPath = "/3d/storage/folder/copy/{srcPath}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (srcPath != null) localVarPathParams.Add("srcPath", Configuration.ApiClient.ParameterToString(srcPath)); // path parameter
+            if (destPath != null) localVarQueryParams.Add("destPath", Configuration.ApiClient.ParameterToString(destPath)); // query parameter
+            if (srcStorageName != null) localVarQueryParams.Add("srcStorageName", Configuration.ApiClient.ParameterToString(srcStorageName)); // query parameter
+            if (destStorageName != null) localVarQueryParams.Add("destStorageName", Configuration.ApiClient.ParameterToString(destStorageName)); // query parameter
+
+            // authentication (JWT) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CopyFolder", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Create the folder 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Folder path to create e.g. &#39;folder_1/folder_2/&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns></returns>
+        public void CreateFolder (string path, string storageName = null)
+        {
+             CreateFolderWithHttpInfo(path, storageName);
+        }
+
+        /// <summary>
+        /// Create the folder 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Folder path to create e.g. &#39;folder_1/folder_2/&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> CreateFolderWithHttpInfo (string path, string storageName = null)
+        {
+            // verify the required parameter 'path' is set
+            if (path == null)
+                throw new ApiException(400, "Missing required parameter 'path' when calling ThreeDCloudApi->CreateFolder");
+
+            var localVarPath = "/3d/storage/folder/{path}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (path != null) localVarPathParams.Add("path", Configuration.ApiClient.ParameterToString(path)); // path parameter
+            if (storageName != null) localVarQueryParams.Add("storageName", Configuration.ApiClient.ParameterToString(storageName)); // query parameter
+
+            // authentication (JWT) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateFolder", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Create the folder 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Folder path to create e.g. &#39;folder_1/folder_2/&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task CreateFolderAsync (string path, string storageName = null)
+        {
+             await CreateFolderAsyncWithHttpInfo(path, storageName);
+
+        }
+
+        /// <summary>
+        /// Create the folder 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Folder path to create e.g. &#39;folder_1/folder_2/&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateFolderAsyncWithHttpInfo (string path, string storageName = null)
+        {
+            // verify the required parameter 'path' is set
+            if (path == null)
+                throw new ApiException(400, "Missing required parameter 'path' when calling ThreeDCloudApi->CreateFolder");
+
+            var localVarPath = "/3d/storage/folder/{path}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (path != null) localVarPathParams.Add("path", Configuration.ApiClient.ParameterToString(path)); // path parameter
+            if (storageName != null) localVarQueryParams.Add("storageName", Configuration.ApiClient.ParameterToString(storageName)); // query parameter
+
+            // authentication (JWT) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateFolder", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Delete file 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">File path e.g. &#39;/folder/file.ext&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <param name="versionId">File version ID to delete (optional)</param>
+        /// <returns></returns>
+        public void DeleteFile (string path, string storageName = null, string versionId = null)
+        {
+             DeleteFileWithHttpInfo(path, storageName, versionId);
+        }
+
+        /// <summary>
+        /// Delete file 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">File path e.g. &#39;/folder/file.ext&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <param name="versionId">File version ID to delete (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteFileWithHttpInfo (string path, string storageName = null, string versionId = null)
+        {
+            // verify the required parameter 'path' is set
+            if (path == null)
+                throw new ApiException(400, "Missing required parameter 'path' when calling ThreeDCloudApi->DeleteFile");
+
+            var localVarPath = "/3d/storage/file/{path}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (path != null) localVarPathParams.Add("path", Configuration.ApiClient.ParameterToString(path)); // path parameter
+            if (storageName != null) localVarQueryParams.Add("storageName", Configuration.ApiClient.ParameterToString(storageName)); // query parameter
+            if (versionId != null) localVarQueryParams.Add("versionId", Configuration.ApiClient.ParameterToString(versionId)); // query parameter
+
+            // authentication (JWT) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DeleteFile", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Delete file 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">File path e.g. &#39;/folder/file.ext&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <param name="versionId">File version ID to delete (optional)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteFileAsync (string path, string storageName = null, string versionId = null)
+        {
+             await DeleteFileAsyncWithHttpInfo(path, storageName, versionId);
+
+        }
+
+        /// <summary>
+        /// Delete file 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">File path e.g. &#39;/folder/file.ext&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <param name="versionId">File version ID to delete (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFileAsyncWithHttpInfo (string path, string storageName = null, string versionId = null)
+        {
+            // verify the required parameter 'path' is set
+            if (path == null)
+                throw new ApiException(400, "Missing required parameter 'path' when calling ThreeDCloudApi->DeleteFile");
+
+            var localVarPath = "/3d/storage/file/{path}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (path != null) localVarPathParams.Add("path", Configuration.ApiClient.ParameterToString(path)); // path parameter
+            if (storageName != null) localVarQueryParams.Add("storageName", Configuration.ApiClient.ParameterToString(storageName)); // query parameter
+            if (versionId != null) localVarQueryParams.Add("versionId", Configuration.ApiClient.ParameterToString(versionId)); // query parameter
+
+            // authentication (JWT) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DeleteFile", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Delete folder 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Folder path e.g. &#39;/folder&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <param name="recursive">Enable to delete folders, subfolders and files (optional, default to false)</param>
+        /// <returns></returns>
+        public void DeleteFolder (string path, string storageName = null, bool? recursive = null)
+        {
+             DeleteFolderWithHttpInfo(path, storageName, recursive);
+        }
+
+        /// <summary>
+        /// Delete folder 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Folder path e.g. &#39;/folder&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <param name="recursive">Enable to delete folders, subfolders and files (optional, default to false)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteFolderWithHttpInfo (string path, string storageName = null, bool? recursive = null)
+        {
+            // verify the required parameter 'path' is set
+            if (path == null)
+                throw new ApiException(400, "Missing required parameter 'path' when calling ThreeDCloudApi->DeleteFolder");
+
+            var localVarPath = "/3d/storage/folder/{path}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (path != null) localVarPathParams.Add("path", Configuration.ApiClient.ParameterToString(path)); // path parameter
+            if (storageName != null) localVarQueryParams.Add("storageName", Configuration.ApiClient.ParameterToString(storageName)); // query parameter
+            if (recursive != null) localVarQueryParams.Add("recursive", Configuration.ApiClient.ParameterToString(recursive)); // query parameter
+
+            // authentication (JWT) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DeleteFolder", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Delete folder 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Folder path e.g. &#39;/folder&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <param name="recursive">Enable to delete folders, subfolders and files (optional, default to false)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteFolderAsync (string path, string storageName = null, bool? recursive = null)
+        {
+             await DeleteFolderAsyncWithHttpInfo(path, storageName, recursive);
+
+        }
+
+        /// <summary>
+        /// Delete folder 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Folder path e.g. &#39;/folder&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <param name="recursive">Enable to delete folders, subfolders and files (optional, default to false)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFolderAsyncWithHttpInfo (string path, string storageName = null, bool? recursive = null)
+        {
+            // verify the required parameter 'path' is set
+            if (path == null)
+                throw new ApiException(400, "Missing required parameter 'path' when calling ThreeDCloudApi->DeleteFolder");
+
+            var localVarPath = "/3d/storage/folder/{path}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (path != null) localVarPathParams.Add("path", Configuration.ApiClient.ParameterToString(path)); // path parameter
+            if (storageName != null) localVarQueryParams.Add("storageName", Configuration.ApiClient.ParameterToString(storageName)); // query parameter
+            if (recursive != null) localVarQueryParams.Add("recursive", Configuration.ApiClient.ParameterToString(recursive)); // query parameter
+
+            // authentication (JWT) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DeleteFolder", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
         /// Delete nodes from scene,nodes are addressed by Object Addressing Path 
         /// </summary>
         /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
@@ -784,7 +2401,7 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
             if (objectaddressingpath == null)
                 throw new ApiException(400, "Missing required parameter 'objectaddressingpath' when calling ThreeDCloudApi->DeleteNodes");
 
-            var localVarPath = "3d/nodes";
+            var localVarPath = "/3d/nodes";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -870,7 +2487,7 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
             if (objectaddressingpath == null)
                 throw new ApiException(400, "Missing required parameter 'objectaddressingpath' when calling ThreeDCloudApi->DeleteNodes");
 
-            var localVarPath = "3d/nodes";
+            var localVarPath = "/3d/nodes";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -923,6 +2540,1274 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
         }
 
         /// <summary>
+        /// Download file 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">File path e.g. &#39;/folder/file.ext&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <param name="versionId">File version ID to download (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream DownloadFile (string path, string storageName = null, string versionId = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = DownloadFileWithHttpInfo(path, storageName, versionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Download file 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">File path e.g. &#39;/folder/file.ext&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <param name="versionId">File version ID to download (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > DownloadFileWithHttpInfo (string path, string storageName = null, string versionId = null)
+        {
+            // verify the required parameter 'path' is set
+            if (path == null)
+                throw new ApiException(400, "Missing required parameter 'path' when calling ThreeDCloudApi->DownloadFile");
+
+            var localVarPath = "/3d/storage/file/{path}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (path != null) localVarPathParams.Add("path", Configuration.ApiClient.ParameterToString(path)); // path parameter
+            if (storageName != null) localVarQueryParams.Add("storageName", Configuration.ApiClient.ParameterToString(storageName)); // query parameter
+            if (versionId != null) localVarQueryParams.Add("versionId", Configuration.ApiClient.ParameterToString(versionId)); // query parameter
+
+            // authentication (JWT) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DownloadFile", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) Configuration.ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Download file 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">File path e.g. &#39;/folder/file.ext&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <param name="versionId">File version ID to download (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> DownloadFileAsync (string path, string storageName = null, string versionId = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await DownloadFileAsyncWithHttpInfo(path, storageName, versionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Download file 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">File path e.g. &#39;/folder/file.ext&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <param name="versionId">File version ID to download (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> DownloadFileAsyncWithHttpInfo (string path, string storageName = null, string versionId = null)
+        {
+            // verify the required parameter 'path' is set
+            if (path == null)
+                throw new ApiException(400, "Missing required parameter 'path' when calling ThreeDCloudApi->DownloadFile");
+
+            var localVarPath = "/3d/storage/file/{path}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (path != null) localVarPathParams.Add("path", Configuration.ApiClient.ParameterToString(path)); // path parameter
+            if (storageName != null) localVarQueryParams.Add("storageName", Configuration.ApiClient.ParameterToString(storageName)); // query parameter
+            if (versionId != null) localVarQueryParams.Add("versionId", Configuration.ApiClient.ParameterToString(versionId)); // query parameter
+
+            // authentication (JWT) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DownloadFile", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) Configuration.ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Get disc usage 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>DiscUsage</returns>
+        public DiscUsage GetDiscUsage (string storageName = null)
+        {
+             ApiResponse<DiscUsage> localVarResponse = GetDiscUsageWithHttpInfo(storageName);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get disc usage 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>ApiResponse of DiscUsage</returns>
+        public ApiResponse< DiscUsage > GetDiscUsageWithHttpInfo (string storageName = null)
+        {
+
+            var localVarPath = "/3d/storage/disc";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storageName != null) localVarQueryParams.Add("storageName", Configuration.ApiClient.ParameterToString(storageName)); // query parameter
+
+            // authentication (JWT) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetDiscUsage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DiscUsage>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DiscUsage) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DiscUsage)));
+        }
+
+        /// <summary>
+        /// Get disc usage 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>Task of DiscUsage</returns>
+        public async System.Threading.Tasks.Task<DiscUsage> GetDiscUsageAsync (string storageName = null)
+        {
+             ApiResponse<DiscUsage> localVarResponse = await GetDiscUsageAsyncWithHttpInfo(storageName);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get disc usage 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>Task of ApiResponse (DiscUsage)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DiscUsage>> GetDiscUsageAsyncWithHttpInfo (string storageName = null)
+        {
+
+            var localVarPath = "/3d/storage/disc";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storageName != null) localVarQueryParams.Add("storageName", Configuration.ApiClient.ParameterToString(storageName)); // query parameter
+
+            // authentication (JWT) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetDiscUsage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DiscUsage>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DiscUsage) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DiscUsage)));
+        }
+
+        /// <summary>
+        /// Get file versions 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">File path e.g. &#39;/file.ext&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>FileVersions</returns>
+        public FileVersions GetFileVersions (string path, string storageName = null)
+        {
+             ApiResponse<FileVersions> localVarResponse = GetFileVersionsWithHttpInfo(path, storageName);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get file versions 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">File path e.g. &#39;/file.ext&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>ApiResponse of FileVersions</returns>
+        public ApiResponse< FileVersions > GetFileVersionsWithHttpInfo (string path, string storageName = null)
+        {
+            // verify the required parameter 'path' is set
+            if (path == null)
+                throw new ApiException(400, "Missing required parameter 'path' when calling ThreeDCloudApi->GetFileVersions");
+
+            var localVarPath = "/3d/storage/version/{path}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (path != null) localVarPathParams.Add("path", Configuration.ApiClient.ParameterToString(path)); // path parameter
+            if (storageName != null) localVarQueryParams.Add("storageName", Configuration.ApiClient.ParameterToString(storageName)); // query parameter
+
+            // authentication (JWT) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetFileVersions", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FileVersions>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FileVersions) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FileVersions)));
+        }
+
+        /// <summary>
+        /// Get file versions 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">File path e.g. &#39;/file.ext&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>Task of FileVersions</returns>
+        public async System.Threading.Tasks.Task<FileVersions> GetFileVersionsAsync (string path, string storageName = null)
+        {
+             ApiResponse<FileVersions> localVarResponse = await GetFileVersionsAsyncWithHttpInfo(path, storageName);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get file versions 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">File path e.g. &#39;/file.ext&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>Task of ApiResponse (FileVersions)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FileVersions>> GetFileVersionsAsyncWithHttpInfo (string path, string storageName = null)
+        {
+            // verify the required parameter 'path' is set
+            if (path == null)
+                throw new ApiException(400, "Missing required parameter 'path' when calling ThreeDCloudApi->GetFileVersions");
+
+            var localVarPath = "/3d/storage/version/{path}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (path != null) localVarPathParams.Add("path", Configuration.ApiClient.ParameterToString(path)); // path parameter
+            if (storageName != null) localVarQueryParams.Add("storageName", Configuration.ApiClient.ParameterToString(storageName)); // query parameter
+
+            // authentication (JWT) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetFileVersions", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FileVersions>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FileVersions) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FileVersions)));
+        }
+
+        /// <summary>
+        /// Get all files and folders within a folder 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Folder path e.g. &#39;/folder&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>FilesList</returns>
+        public FilesList GetFilesList (string path, string storageName = null)
+        {
+             ApiResponse<FilesList> localVarResponse = GetFilesListWithHttpInfo(path, storageName);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get all files and folders within a folder 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Folder path e.g. &#39;/folder&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>ApiResponse of FilesList</returns>
+        public ApiResponse< FilesList > GetFilesListWithHttpInfo (string path, string storageName = null)
+        {
+            // verify the required parameter 'path' is set
+            if (path == null)
+                throw new ApiException(400, "Missing required parameter 'path' when calling ThreeDCloudApi->GetFilesList");
+
+            var localVarPath = "/3d/storage/folder/{path}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (path != null) localVarPathParams.Add("path", Configuration.ApiClient.ParameterToString(path)); // path parameter
+            if (storageName != null) localVarQueryParams.Add("storageName", Configuration.ApiClient.ParameterToString(storageName)); // query parameter
+
+            // authentication (JWT) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetFilesList", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FilesList>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FilesList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FilesList)));
+        }
+
+        /// <summary>
+        /// Get all files and folders within a folder 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Folder path e.g. &#39;/folder&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>Task of FilesList</returns>
+        public async System.Threading.Tasks.Task<FilesList> GetFilesListAsync (string path, string storageName = null)
+        {
+             ApiResponse<FilesList> localVarResponse = await GetFilesListAsyncWithHttpInfo(path, storageName);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get all files and folders within a folder 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Folder path e.g. &#39;/folder&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>Task of ApiResponse (FilesList)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FilesList>> GetFilesListAsyncWithHttpInfo (string path, string storageName = null)
+        {
+            // verify the required parameter 'path' is set
+            if (path == null)
+                throw new ApiException(400, "Missing required parameter 'path' when calling ThreeDCloudApi->GetFilesList");
+
+            var localVarPath = "/3d/storage/folder/{path}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (path != null) localVarPathParams.Add("path", Configuration.ApiClient.ParameterToString(path)); // path parameter
+            if (storageName != null) localVarQueryParams.Add("storageName", Configuration.ApiClient.ParameterToString(storageName)); // query parameter
+
+            // authentication (JWT) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetFilesList", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FilesList>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FilesList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FilesList)));
+        }
+
+        /// <summary>
+        /// Move file 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="srcPath">Source file path e.g. &#39;/src.ext&#39;</param>
+        /// <param name="destPath">Destination file path e.g. &#39;/dest.ext&#39;</param>
+        /// <param name="srcStorageName">Source storage name (optional)</param>
+        /// <param name="destStorageName">Destination storage name (optional)</param>
+        /// <param name="versionId">File version ID to move (optional)</param>
+        /// <returns></returns>
+        public void MoveFile (string srcPath, string destPath, string srcStorageName = null, string destStorageName = null, string versionId = null)
+        {
+             MoveFileWithHttpInfo(srcPath, destPath, srcStorageName, destStorageName, versionId);
+        }
+
+        /// <summary>
+        /// Move file 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="srcPath">Source file path e.g. &#39;/src.ext&#39;</param>
+        /// <param name="destPath">Destination file path e.g. &#39;/dest.ext&#39;</param>
+        /// <param name="srcStorageName">Source storage name (optional)</param>
+        /// <param name="destStorageName">Destination storage name (optional)</param>
+        /// <param name="versionId">File version ID to move (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> MoveFileWithHttpInfo (string srcPath, string destPath, string srcStorageName = null, string destStorageName = null, string versionId = null)
+        {
+            // verify the required parameter 'srcPath' is set
+            if (srcPath == null)
+                throw new ApiException(400, "Missing required parameter 'srcPath' when calling ThreeDCloudApi->MoveFile");
+            // verify the required parameter 'destPath' is set
+            if (destPath == null)
+                throw new ApiException(400, "Missing required parameter 'destPath' when calling ThreeDCloudApi->MoveFile");
+
+            var localVarPath = "/3d/storage/file/move/{srcPath}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (srcPath != null) localVarPathParams.Add("srcPath", Configuration.ApiClient.ParameterToString(srcPath)); // path parameter
+            if (destPath != null) localVarQueryParams.Add("destPath", Configuration.ApiClient.ParameterToString(destPath)); // query parameter
+            if (srcStorageName != null) localVarQueryParams.Add("srcStorageName", Configuration.ApiClient.ParameterToString(srcStorageName)); // query parameter
+            if (destStorageName != null) localVarQueryParams.Add("destStorageName", Configuration.ApiClient.ParameterToString(destStorageName)); // query parameter
+            if (versionId != null) localVarQueryParams.Add("versionId", Configuration.ApiClient.ParameterToString(versionId)); // query parameter
+
+            // authentication (JWT) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MoveFile", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Move file 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="srcPath">Source file path e.g. &#39;/src.ext&#39;</param>
+        /// <param name="destPath">Destination file path e.g. &#39;/dest.ext&#39;</param>
+        /// <param name="srcStorageName">Source storage name (optional)</param>
+        /// <param name="destStorageName">Destination storage name (optional)</param>
+        /// <param name="versionId">File version ID to move (optional)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task MoveFileAsync (string srcPath, string destPath, string srcStorageName = null, string destStorageName = null, string versionId = null)
+        {
+             await MoveFileAsyncWithHttpInfo(srcPath, destPath, srcStorageName, destStorageName, versionId);
+
+        }
+
+        /// <summary>
+        /// Move file 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="srcPath">Source file path e.g. &#39;/src.ext&#39;</param>
+        /// <param name="destPath">Destination file path e.g. &#39;/dest.ext&#39;</param>
+        /// <param name="srcStorageName">Source storage name (optional)</param>
+        /// <param name="destStorageName">Destination storage name (optional)</param>
+        /// <param name="versionId">File version ID to move (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> MoveFileAsyncWithHttpInfo (string srcPath, string destPath, string srcStorageName = null, string destStorageName = null, string versionId = null)
+        {
+            // verify the required parameter 'srcPath' is set
+            if (srcPath == null)
+                throw new ApiException(400, "Missing required parameter 'srcPath' when calling ThreeDCloudApi->MoveFile");
+            // verify the required parameter 'destPath' is set
+            if (destPath == null)
+                throw new ApiException(400, "Missing required parameter 'destPath' when calling ThreeDCloudApi->MoveFile");
+
+            var localVarPath = "/3d/storage/file/move/{srcPath}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (srcPath != null) localVarPathParams.Add("srcPath", Configuration.ApiClient.ParameterToString(srcPath)); // path parameter
+            if (destPath != null) localVarQueryParams.Add("destPath", Configuration.ApiClient.ParameterToString(destPath)); // query parameter
+            if (srcStorageName != null) localVarQueryParams.Add("srcStorageName", Configuration.ApiClient.ParameterToString(srcStorageName)); // query parameter
+            if (destStorageName != null) localVarQueryParams.Add("destStorageName", Configuration.ApiClient.ParameterToString(destStorageName)); // query parameter
+            if (versionId != null) localVarQueryParams.Add("versionId", Configuration.ApiClient.ParameterToString(versionId)); // query parameter
+
+            // authentication (JWT) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MoveFile", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Move folder 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="srcPath">Folder path to move e.g. &#39;/folder&#39;</param>
+        /// <param name="destPath">Destination folder path to move to e.g &#39;/dst&#39;</param>
+        /// <param name="srcStorageName">Source storage name (optional)</param>
+        /// <param name="destStorageName">Destination storage name (optional)</param>
+        /// <returns></returns>
+        public void MoveFolder (string srcPath, string destPath, string srcStorageName = null, string destStorageName = null)
+        {
+             MoveFolderWithHttpInfo(srcPath, destPath, srcStorageName, destStorageName);
+        }
+
+        /// <summary>
+        /// Move folder 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="srcPath">Folder path to move e.g. &#39;/folder&#39;</param>
+        /// <param name="destPath">Destination folder path to move to e.g &#39;/dst&#39;</param>
+        /// <param name="srcStorageName">Source storage name (optional)</param>
+        /// <param name="destStorageName">Destination storage name (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> MoveFolderWithHttpInfo (string srcPath, string destPath, string srcStorageName = null, string destStorageName = null)
+        {
+            // verify the required parameter 'srcPath' is set
+            if (srcPath == null)
+                throw new ApiException(400, "Missing required parameter 'srcPath' when calling ThreeDCloudApi->MoveFolder");
+            // verify the required parameter 'destPath' is set
+            if (destPath == null)
+                throw new ApiException(400, "Missing required parameter 'destPath' when calling ThreeDCloudApi->MoveFolder");
+
+            var localVarPath = "/3d/storage/folder/move/{srcPath}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (srcPath != null) localVarPathParams.Add("srcPath", Configuration.ApiClient.ParameterToString(srcPath)); // path parameter
+            if (destPath != null) localVarQueryParams.Add("destPath", Configuration.ApiClient.ParameterToString(destPath)); // query parameter
+            if (srcStorageName != null) localVarQueryParams.Add("srcStorageName", Configuration.ApiClient.ParameterToString(srcStorageName)); // query parameter
+            if (destStorageName != null) localVarQueryParams.Add("destStorageName", Configuration.ApiClient.ParameterToString(destStorageName)); // query parameter
+
+            // authentication (JWT) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MoveFolder", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Move folder 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="srcPath">Folder path to move e.g. &#39;/folder&#39;</param>
+        /// <param name="destPath">Destination folder path to move to e.g &#39;/dst&#39;</param>
+        /// <param name="srcStorageName">Source storage name (optional)</param>
+        /// <param name="destStorageName">Destination storage name (optional)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task MoveFolderAsync (string srcPath, string destPath, string srcStorageName = null, string destStorageName = null)
+        {
+             await MoveFolderAsyncWithHttpInfo(srcPath, destPath, srcStorageName, destStorageName);
+
+        }
+
+        /// <summary>
+        /// Move folder 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="srcPath">Folder path to move e.g. &#39;/folder&#39;</param>
+        /// <param name="destPath">Destination folder path to move to e.g &#39;/dst&#39;</param>
+        /// <param name="srcStorageName">Source storage name (optional)</param>
+        /// <param name="destStorageName">Destination storage name (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> MoveFolderAsyncWithHttpInfo (string srcPath, string destPath, string srcStorageName = null, string destStorageName = null)
+        {
+            // verify the required parameter 'srcPath' is set
+            if (srcPath == null)
+                throw new ApiException(400, "Missing required parameter 'srcPath' when calling ThreeDCloudApi->MoveFolder");
+            // verify the required parameter 'destPath' is set
+            if (destPath == null)
+                throw new ApiException(400, "Missing required parameter 'destPath' when calling ThreeDCloudApi->MoveFolder");
+
+            var localVarPath = "/3d/storage/folder/move/{srcPath}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (srcPath != null) localVarPathParams.Add("srcPath", Configuration.ApiClient.ParameterToString(srcPath)); // path parameter
+            if (destPath != null) localVarQueryParams.Add("destPath", Configuration.ApiClient.ParameterToString(destPath)); // query parameter
+            if (srcStorageName != null) localVarQueryParams.Add("srcStorageName", Configuration.ApiClient.ParameterToString(srcStorageName)); // query parameter
+            if (destStorageName != null) localVarQueryParams.Add("destStorageName", Configuration.ApiClient.ParameterToString(destStorageName)); // query parameter
+
+            // authentication (JWT) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MoveFolder", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Get Access token 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="grantType">Grant Type</param>
+        /// <param name="clientId">App SID</param>
+        /// <param name="clientSecret">App Key</param>
+        /// <returns>AccessTokenResponse</returns>
+        public AccessTokenResponse OAuthPost (string grantType, string clientId, string clientSecret)
+        {
+             ApiResponse<AccessTokenResponse> localVarResponse = OAuthPostWithHttpInfo(grantType, clientId, clientSecret);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Access token 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="grantType">Grant Type</param>
+        /// <param name="clientId">App SID</param>
+        /// <param name="clientSecret">App Key</param>
+        /// <returns>ApiResponse of AccessTokenResponse</returns>
+        public ApiResponse< AccessTokenResponse > OAuthPostWithHttpInfo (string grantType, string clientId, string clientSecret)
+        {
+            // verify the required parameter 'grantType' is set
+            if (grantType == null)
+                throw new ApiException(400, "Missing required parameter 'grantType' when calling ThreeDCloudApi->OAuthPost");
+            // verify the required parameter 'clientId' is set
+            if (clientId == null)
+                throw new ApiException(400, "Missing required parameter 'clientId' when calling ThreeDCloudApi->OAuthPost");
+            // verify the required parameter 'clientSecret' is set
+            if (clientSecret == null)
+                throw new ApiException(400, "Missing required parameter 'clientSecret' when calling ThreeDCloudApi->OAuthPost");
+
+            var localVarPath = "/connect/token";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (grantType != null) localVarFormParams.Add("grant_type", Configuration.ApiClient.ParameterToString(grantType)); // form parameter
+            if (clientId != null) localVarFormParams.Add("client_id", Configuration.ApiClient.ParameterToString(clientId)); // form parameter
+            if (clientSecret != null) localVarFormParams.Add("client_secret", Configuration.ApiClient.ParameterToString(clientSecret)); // form parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("OAuthPost", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<AccessTokenResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AccessTokenResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AccessTokenResponse)));
+        }
+
+        /// <summary>
+        /// Get Access token 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="grantType">Grant Type</param>
+        /// <param name="clientId">App SID</param>
+        /// <param name="clientSecret">App Key</param>
+        /// <returns>Task of AccessTokenResponse</returns>
+        public async System.Threading.Tasks.Task<AccessTokenResponse> OAuthPostAsync (string grantType, string clientId, string clientSecret)
+        {
+             ApiResponse<AccessTokenResponse> localVarResponse = await OAuthPostAsyncWithHttpInfo(grantType, clientId, clientSecret);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Access token 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="grantType">Grant Type</param>
+        /// <param name="clientId">App SID</param>
+        /// <param name="clientSecret">App Key</param>
+        /// <returns>Task of ApiResponse (AccessTokenResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AccessTokenResponse>> OAuthPostAsyncWithHttpInfo (string grantType, string clientId, string clientSecret)
+        {
+            // verify the required parameter 'grantType' is set
+            if (grantType == null)
+                throw new ApiException(400, "Missing required parameter 'grantType' when calling ThreeDCloudApi->OAuthPost");
+            // verify the required parameter 'clientId' is set
+            if (clientId == null)
+                throw new ApiException(400, "Missing required parameter 'clientId' when calling ThreeDCloudApi->OAuthPost");
+            // verify the required parameter 'clientSecret' is set
+            if (clientSecret == null)
+                throw new ApiException(400, "Missing required parameter 'clientSecret' when calling ThreeDCloudApi->OAuthPost");
+
+            var localVarPath = "/connect/token";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (grantType != null) localVarFormParams.Add("grant_type", Configuration.ApiClient.ParameterToString(grantType)); // form parameter
+            if (clientId != null) localVarFormParams.Add("client_id", Configuration.ApiClient.ParameterToString(clientId)); // form parameter
+            if (clientSecret != null) localVarFormParams.Add("client_secret", Configuration.ApiClient.ParameterToString(clientSecret)); // form parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("OAuthPost", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<AccessTokenResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AccessTokenResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AccessTokenResponse)));
+        }
+
+        /// <summary>
+        /// Check if file or folder exists 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">File or folder path e.g. &#39;/file.ext&#39; or &#39;/folder&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <param name="versionId">File version ID (optional)</param>
+        /// <returns>ObjectExist</returns>
+        public ObjectExist ObjectExists (string path, string storageName = null, string versionId = null)
+        {
+             ApiResponse<ObjectExist> localVarResponse = ObjectExistsWithHttpInfo(path, storageName, versionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Check if file or folder exists 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">File or folder path e.g. &#39;/file.ext&#39; or &#39;/folder&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <param name="versionId">File version ID (optional)</param>
+        /// <returns>ApiResponse of ObjectExist</returns>
+        public ApiResponse< ObjectExist > ObjectExistsWithHttpInfo (string path, string storageName = null, string versionId = null)
+        {
+            // verify the required parameter 'path' is set
+            if (path == null)
+                throw new ApiException(400, "Missing required parameter 'path' when calling ThreeDCloudApi->ObjectExists");
+
+            var localVarPath = "/3d/storage/exist/{path}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (path != null) localVarPathParams.Add("path", Configuration.ApiClient.ParameterToString(path)); // path parameter
+            if (storageName != null) localVarQueryParams.Add("storageName", Configuration.ApiClient.ParameterToString(storageName)); // query parameter
+            if (versionId != null) localVarQueryParams.Add("versionId", Configuration.ApiClient.ParameterToString(versionId)); // query parameter
+
+            // authentication (JWT) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ObjectExists", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ObjectExist>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ObjectExist) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ObjectExist)));
+        }
+
+        /// <summary>
+        /// Check if file or folder exists 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">File or folder path e.g. &#39;/file.ext&#39; or &#39;/folder&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <param name="versionId">File version ID (optional)</param>
+        /// <returns>Task of ObjectExist</returns>
+        public async System.Threading.Tasks.Task<ObjectExist> ObjectExistsAsync (string path, string storageName = null, string versionId = null)
+        {
+             ApiResponse<ObjectExist> localVarResponse = await ObjectExistsAsyncWithHttpInfo(path, storageName, versionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Check if file or folder exists 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">File or folder path e.g. &#39;/file.ext&#39; or &#39;/folder&#39;</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <param name="versionId">File version ID (optional)</param>
+        /// <returns>Task of ApiResponse (ObjectExist)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ObjectExist>> ObjectExistsAsyncWithHttpInfo (string path, string storageName = null, string versionId = null)
+        {
+            // verify the required parameter 'path' is set
+            if (path == null)
+                throw new ApiException(400, "Missing required parameter 'path' when calling ThreeDCloudApi->ObjectExists");
+
+            var localVarPath = "/3d/storage/exist/{path}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (path != null) localVarPathParams.Add("path", Configuration.ApiClient.ParameterToString(path)); // path parameter
+            if (storageName != null) localVarQueryParams.Add("storageName", Configuration.ApiClient.ParameterToString(storageName)); // query parameter
+            if (versionId != null) localVarQueryParams.Add("versionId", Configuration.ApiClient.ParameterToString(versionId)); // query parameter
+
+            // authentication (JWT) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ObjectExists", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ObjectExist>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ObjectExist) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ObjectExist)));
+        }
+
+        /// <summary>
         /// Convert file on server to other formats with fileformat parameter              
         /// </summary>
         /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
@@ -962,7 +3847,7 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
             if (newfilename == null)
                 throw new ApiException(400, "Missing required parameter 'newfilename' when calling ThreeDCloudApi->PostConvertByFormat");
 
-            var localVarPath = "3d/saveas/newformat";
+            var localVarPath = "/3d/saveas/newformat";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1057,7 +3942,7 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
             if (newfilename == null)
                 throw new ApiException(400, "Missing required parameter 'newfilename' when calling ThreeDCloudApi->PostConvertByFormat");
 
-            var localVarPath = "3d/saveas/newformat";
+            var localVarPath = "/3d/saveas/newformat";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1151,7 +4036,7 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
             if (newfilename == null)
                 throw new ApiException(400, "Missing required parameter 'newfilename' when calling ThreeDCloudApi->PostConvertByOpt");
 
-            var localVarPath = "3d/saveas/saveoption";
+            var localVarPath = "/3d/saveas/saveoption";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1253,7 +4138,7 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
             if (newfilename == null)
                 throw new ApiException(400, "Missing required parameter 'newfilename' when calling ThreeDCloudApi->PostConvertByOpt");
 
-            var localVarPath = "3d/saveas/saveoption";
+            var localVarPath = "/3d/saveas/saveoption";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1338,7 +4223,7 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
             if (format == null)
                 throw new ApiException(400, "Missing required parameter 'format' when calling ThreeDCloudApi->PostCreate");
 
-            var localVarPath = "3d/new";
+            var localVarPath = "/3d/new";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1348,13 +4233,13 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "multipart/form-data"
+                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
+                "multipart/form-data"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1412,7 +4297,7 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
             if (format == null)
                 throw new ApiException(400, "Missing required parameter 'format' when calling ThreeDCloudApi->PostCreate");
 
-            var localVarPath = "3d/new";
+            var localVarPath = "/3d/new";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1422,13 +4307,13 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "multipart/form-data"
+                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
+                "multipart/form-data"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1462,7 +4347,7 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
         }
 
         /// <summary>
-        /// Parametric Modeling�� Create a Entity with size and located in ... 
+        /// Parametric Modeling, Create a Entity with size and located in ... 
         /// </summary>
         /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the source file.</param>
@@ -1478,7 +4363,7 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
         }
 
         /// <summary>
-        /// Parametric Modeling�� Create a Entity with size and located in ... 
+        /// Parametric Modeling, Create a Entity with size and located in ... 
         /// </summary>
         /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the source file.</param>
@@ -1496,7 +4381,7 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
             if (modeldata == null)
                 throw new ApiException(400, "Missing required parameter 'modeldata' when calling ThreeDCloudApi->PostModel");
 
-            var localVarPath = "3d/root";
+            var localVarPath = "/3d/root";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1557,7 +4442,7 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
         }
 
         /// <summary>
-        /// Parametric Modeling�� Create a Entity with size and located in ... 
+        /// Parametric Modeling, Create a Entity with size and located in ... 
         /// </summary>
         /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the source file.</param>
@@ -1574,7 +4459,7 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
         }
 
         /// <summary>
-        /// Parametric Modeling�� Create a Entity with size and located in ... 
+        /// Parametric Modeling, Create a Entity with size and located in ... 
         /// </summary>
         /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the source file.</param>
@@ -1592,7 +4477,7 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
             if (modeldata == null)
                 throw new ApiException(400, "Missing required parameter 'modeldata' when calling ThreeDCloudApi->PostModel");
 
-            var localVarPath = "3d/root";
+            var localVarPath = "/3d/root";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1687,7 +4572,7 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
             if (multifileprefix == null)
                 throw new ApiException(400, "Missing required parameter 'multifileprefix' when calling ThreeDCloudApi->PostPdfRawData");
 
-            var localVarPath = "3d/extract/rawdata";
+            var localVarPath = "/3d/extract/rawdata";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1776,7 +4661,7 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
             if (multifileprefix == null)
                 throw new ApiException(400, "Missing required parameter 'multifileprefix' when calling ThreeDCloudApi->PostPdfRawData");
 
-            var localVarPath = "3d/extract/rawdata";
+            var localVarPath = "/3d/extract/rawdata";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1874,7 +4759,7 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
             if (newfilename == null)
                 throw new ApiException(400, "Missing required parameter 'newfilename' when calling ThreeDCloudApi->PostSaveAsPart");
 
-            var localVarPath = "3d/saveas/part";
+            var localVarPath = "/3d/saveas/part";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1975,7 +4860,7 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
             if (newfilename == null)
                 throw new ApiException(400, "Missing required parameter 'newfilename' when calling ThreeDCloudApi->PostSaveAsPart");
 
-            var localVarPath = "3d/saveas/part";
+            var localVarPath = "/3d/saveas/part";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2067,7 +4952,7 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
             if (multifileprefix == null)
                 throw new ApiException(400, "Missing required parameter 'multifileprefix' when calling ThreeDCloudApi->PostSceneToFile");
 
-            var localVarPath = "3d/extract/scene";
+            var localVarPath = "/3d/extract/scene";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2159,7 +5044,7 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
             if (multifileprefix == null)
                 throw new ApiException(400, "Missing required parameter 'multifileprefix' when calling ThreeDCloudApi->PostSceneToFile");
 
-            var localVarPath = "3d/extract/scene";
+            var localVarPath = "/3d/extract/scene";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2251,7 +5136,7 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
             if (newformat == null)
                 throw new ApiException(400, "Missing required parameter 'newformat' when calling ThreeDCloudApi->PostTriangulateNew");
 
-            var localVarPath = "3d/triangulate/new";
+            var localVarPath = "/3d/triangulate/new";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2343,7 +5228,7 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
             if (newformat == null)
                 throw new ApiException(400, "Missing required parameter 'newformat' when calling ThreeDCloudApi->PostTriangulateNew");
 
-            var localVarPath = "3d/triangulate/new";
+            var localVarPath = "/3d/triangulate/new";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2424,7 +5309,7 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling ThreeDCloudApi->PostTriangulateOriginal");
 
-            var localVarPath = "3d/triangulate/original";
+            var localVarPath = "/3d/triangulate/original";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2504,7 +5389,7 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling ThreeDCloudApi->PostTriangulateOriginal");
 
-            var localVarPath = "3d/triangulate/original";
+            var localVarPath = "/3d/triangulate/original";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2553,6 +5438,513 @@ namespace Aspose.ThreeD.Cloud.SDK.Api
             return new ApiResponse<System.IO.Stream>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (System.IO.Stream) Configuration.ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Triangulate part of the scene(Specified by OAP) and save the scene to different file  
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The file&#39;s mame</param>
+        /// <param name="objectaddressingpath">The node or mesh getted by OAP.</param>
+        /// <param name="newfilename">The new file&#39;s mame</param>
+        /// <param name="newformat">The new file&#39;s format</param>
+        /// <param name="folder">The folder for source file (optional)</param>
+        /// <param name="storage">The storage type (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream PostTriangulatePart (string name, string objectaddressingpath, string newfilename, string newformat, string folder = null, string storage = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = PostTriangulatePartWithHttpInfo(name, objectaddressingpath, newfilename, newformat, folder, storage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Triangulate part of the scene(Specified by OAP) and save the scene to different file  
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The file&#39;s mame</param>
+        /// <param name="objectaddressingpath">The node or mesh getted by OAP.</param>
+        /// <param name="newfilename">The new file&#39;s mame</param>
+        /// <param name="newformat">The new file&#39;s format</param>
+        /// <param name="folder">The folder for source file (optional)</param>
+        /// <param name="storage">The storage type (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > PostTriangulatePartWithHttpInfo (string name, string objectaddressingpath, string newfilename, string newformat, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling ThreeDCloudApi->PostTriangulatePart");
+            // verify the required parameter 'objectaddressingpath' is set
+            if (objectaddressingpath == null)
+                throw new ApiException(400, "Missing required parameter 'objectaddressingpath' when calling ThreeDCloudApi->PostTriangulatePart");
+            // verify the required parameter 'newfilename' is set
+            if (newfilename == null)
+                throw new ApiException(400, "Missing required parameter 'newfilename' when calling ThreeDCloudApi->PostTriangulatePart");
+            // verify the required parameter 'newformat' is set
+            if (newformat == null)
+                throw new ApiException(400, "Missing required parameter 'newformat' when calling ThreeDCloudApi->PostTriangulatePart");
+
+            var localVarPath = "/3d/triangulate/part";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (objectaddressingpath != null) localVarQueryParams.Add("objectaddressingpath", Configuration.ApiClient.ParameterToString(objectaddressingpath)); // query parameter
+            if (newfilename != null) localVarQueryParams.Add("newfilename", Configuration.ApiClient.ParameterToString(newfilename)); // query parameter
+            if (newformat != null) localVarQueryParams.Add("newformat", Configuration.ApiClient.ParameterToString(newformat)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", Configuration.ApiClient.ParameterToString(folder)); // query parameter
+            if (storage != null) localVarQueryParams.Add("storage", Configuration.ApiClient.ParameterToString(storage)); // query parameter
+
+            // authentication (JWT) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostTriangulatePart", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) Configuration.ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Triangulate part of the scene(Specified by OAP) and save the scene to different file  
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The file&#39;s mame</param>
+        /// <param name="objectaddressingpath">The node or mesh getted by OAP.</param>
+        /// <param name="newfilename">The new file&#39;s mame</param>
+        /// <param name="newformat">The new file&#39;s format</param>
+        /// <param name="folder">The folder for source file (optional)</param>
+        /// <param name="storage">The storage type (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> PostTriangulatePartAsync (string name, string objectaddressingpath, string newfilename, string newformat, string folder = null, string storage = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await PostTriangulatePartAsyncWithHttpInfo(name, objectaddressingpath, newfilename, newformat, folder, storage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Triangulate part of the scene(Specified by OAP) and save the scene to different file  
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The file&#39;s mame</param>
+        /// <param name="objectaddressingpath">The node or mesh getted by OAP.</param>
+        /// <param name="newfilename">The new file&#39;s mame</param>
+        /// <param name="newformat">The new file&#39;s format</param>
+        /// <param name="folder">The folder for source file (optional)</param>
+        /// <param name="storage">The storage type (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PostTriangulatePartAsyncWithHttpInfo (string name, string objectaddressingpath, string newfilename, string newformat, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling ThreeDCloudApi->PostTriangulatePart");
+            // verify the required parameter 'objectaddressingpath' is set
+            if (objectaddressingpath == null)
+                throw new ApiException(400, "Missing required parameter 'objectaddressingpath' when calling ThreeDCloudApi->PostTriangulatePart");
+            // verify the required parameter 'newfilename' is set
+            if (newfilename == null)
+                throw new ApiException(400, "Missing required parameter 'newfilename' when calling ThreeDCloudApi->PostTriangulatePart");
+            // verify the required parameter 'newformat' is set
+            if (newformat == null)
+                throw new ApiException(400, "Missing required parameter 'newformat' when calling ThreeDCloudApi->PostTriangulatePart");
+
+            var localVarPath = "/3d/triangulate/part";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (objectaddressingpath != null) localVarQueryParams.Add("objectaddressingpath", Configuration.ApiClient.ParameterToString(objectaddressingpath)); // query parameter
+            if (newfilename != null) localVarQueryParams.Add("newfilename", Configuration.ApiClient.ParameterToString(newfilename)); // query parameter
+            if (newformat != null) localVarQueryParams.Add("newformat", Configuration.ApiClient.ParameterToString(newformat)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", Configuration.ApiClient.ParameterToString(folder)); // query parameter
+            if (storage != null) localVarQueryParams.Add("storage", Configuration.ApiClient.ParameterToString(storage)); // query parameter
+
+            // authentication (JWT) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostTriangulatePart", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) Configuration.ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Check if storage exists 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageName">Storage name</param>
+        /// <returns>StorageExist</returns>
+        public StorageExist StorageExists (string storageName)
+        {
+             ApiResponse<StorageExist> localVarResponse = StorageExistsWithHttpInfo(storageName);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Check if storage exists 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageName">Storage name</param>
+        /// <returns>ApiResponse of StorageExist</returns>
+        public ApiResponse< StorageExist > StorageExistsWithHttpInfo (string storageName)
+        {
+            // verify the required parameter 'storageName' is set
+            if (storageName == null)
+                throw new ApiException(400, "Missing required parameter 'storageName' when calling ThreeDCloudApi->StorageExists");
+
+            var localVarPath = "/3d/storage/{storageName}/exist";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storageName != null) localVarPathParams.Add("storageName", Configuration.ApiClient.ParameterToString(storageName)); // path parameter
+
+            // authentication (JWT) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("StorageExists", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<StorageExist>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (StorageExist) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StorageExist)));
+        }
+
+        /// <summary>
+        /// Check if storage exists 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageName">Storage name</param>
+        /// <returns>Task of StorageExist</returns>
+        public async System.Threading.Tasks.Task<StorageExist> StorageExistsAsync (string storageName)
+        {
+             ApiResponse<StorageExist> localVarResponse = await StorageExistsAsyncWithHttpInfo(storageName);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Check if storage exists 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageName">Storage name</param>
+        /// <returns>Task of ApiResponse (StorageExist)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<StorageExist>> StorageExistsAsyncWithHttpInfo (string storageName)
+        {
+            // verify the required parameter 'storageName' is set
+            if (storageName == null)
+                throw new ApiException(400, "Missing required parameter 'storageName' when calling ThreeDCloudApi->StorageExists");
+
+            var localVarPath = "/3d/storage/{storageName}/exist";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storageName != null) localVarPathParams.Add("storageName", Configuration.ApiClient.ParameterToString(storageName)); // path parameter
+
+            // authentication (JWT) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("StorageExists", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<StorageExist>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (StorageExist) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StorageExist)));
+        }
+
+        /// <summary>
+        /// Upload file 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.             </param>
+        /// <param name="_file">File to upload</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>FilesUploadResult</returns>
+        public FilesUploadResult UploadFile (string path, System.IO.Stream _file, string storageName = null)
+        {
+             ApiResponse<FilesUploadResult> localVarResponse = UploadFileWithHttpInfo(path, _file, storageName);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Upload file 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.             </param>
+        /// <param name="_file">File to upload</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>ApiResponse of FilesUploadResult</returns>
+        public ApiResponse< FilesUploadResult > UploadFileWithHttpInfo (string path, System.IO.Stream _file, string storageName = null)
+        {
+            // verify the required parameter 'path' is set
+            if (path == null)
+                throw new ApiException(400, "Missing required parameter 'path' when calling ThreeDCloudApi->UploadFile");
+            // verify the required parameter '_file' is set
+            if (_file == null)
+                throw new ApiException(400, "Missing required parameter '_file' when calling ThreeDCloudApi->UploadFile");
+
+            var localVarPath = "/3d/storage/file/{path}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (path != null) localVarPathParams.Add("path", Configuration.ApiClient.ParameterToString(path)); // path parameter
+            if (storageName != null) localVarQueryParams.Add("storageName", Configuration.ApiClient.ParameterToString(storageName)); // query parameter
+            if (_file != null) localVarFileParams.Add("File", Configuration.ApiClient.ParameterToFile("File", _file));
+
+            // authentication (JWT) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UploadFile", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FilesUploadResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FilesUploadResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FilesUploadResult)));
+        }
+
+        /// <summary>
+        /// Upload file 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.             </param>
+        /// <param name="_file">File to upload</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>Task of FilesUploadResult</returns>
+        public async System.Threading.Tasks.Task<FilesUploadResult> UploadFileAsync (string path, System.IO.Stream _file, string storageName = null)
+        {
+             ApiResponse<FilesUploadResult> localVarResponse = await UploadFileAsyncWithHttpInfo(path, _file, storageName);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Upload file 
+        /// </summary>
+        /// <exception cref="Aspose.ThreeD.Cloud.SDK.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.             </param>
+        /// <param name="_file">File to upload</param>
+        /// <param name="storageName">Storage name (optional)</param>
+        /// <returns>Task of ApiResponse (FilesUploadResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FilesUploadResult>> UploadFileAsyncWithHttpInfo (string path, System.IO.Stream _file, string storageName = null)
+        {
+            // verify the required parameter 'path' is set
+            if (path == null)
+                throw new ApiException(400, "Missing required parameter 'path' when calling ThreeDCloudApi->UploadFile");
+            // verify the required parameter '_file' is set
+            if (_file == null)
+                throw new ApiException(400, "Missing required parameter '_file' when calling ThreeDCloudApi->UploadFile");
+
+            var localVarPath = "/3d/storage/file/{path}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (path != null) localVarPathParams.Add("path", Configuration.ApiClient.ParameterToString(path)); // path parameter
+            if (storageName != null) localVarQueryParams.Add("storageName", Configuration.ApiClient.ParameterToString(storageName)); // query parameter
+            if (_file != null) localVarFileParams.Add("File", Configuration.ApiClient.ParameterToFile("File", _file));
+
+            // authentication (JWT) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UploadFile", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FilesUploadResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FilesUploadResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FilesUploadResult)));
         }
 
     }

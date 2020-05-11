@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="Cylinder.cs">
-//   Copyright (c) 2018 Aspose.ThreeD for Cloud
+//   Copyright (c) 2020 Aspose.ThreeD for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -87,7 +87,7 @@ namespace Aspose.ThreeD.Cloud.SDK.Model
         public double? ThetaStart { get; set; }
 		
         /// <summary>
-        /// Gets or sets the length of the theta. The default value is 2��.
+        /// Gets or sets the length of the theta. The default value is 2p.
         /// </summary>  
         [DataMember(Name="ThetaLength", EmitDefaultValue=false)] 
         public double? ThetaLength { get; set; }

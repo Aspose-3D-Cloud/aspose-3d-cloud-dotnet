@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="SaveFormat.cs">
-//   Copyright (c) 2018 Aspose.ThreeD for Cloud
+//   Copyright (c) 2020 Aspose.ThreeD for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -43,6 +43,16 @@ namespace Aspose.ThreeD.Cloud.SDK.Model
         AMF,
 		
 		/// <summary>
+        /// Enum value ASE
+        /// </summary>            
+        ASE,
+		
+		/// <summary>
+        /// Enum value Aspose3DWeb
+        /// </summary>            
+        Aspose3DWeb,
+		
+		/// <summary>
         /// Enum value Collada
         /// </summary>            
         Collada,
@@ -58,6 +68,11 @@ namespace Aspose.ThreeD.Cloud.SDK.Model
         Draco,
 		
 		/// <summary>
+        /// Enum value DXF
+        /// </summary>            
+        DXF,
+		
+		/// <summary>
         /// Enum value FBX
         /// </summary>            
         FBX,
@@ -66,6 +81,21 @@ namespace Aspose.ThreeD.Cloud.SDK.Model
         /// Enum value GLTF
         /// </summary>            
         GLTF,
+		
+		/// <summary>
+        /// Enum value HTML5
+        /// </summary>            
+        HTML,
+		
+		/// <summary>
+        /// Enum value JT
+        /// </summary>            
+        JT,
+		
+		/// <summary>
+        /// Enum value Microsoft3MF
+        /// </summary>            
+        Microsoft3MF,
 		
 		/// <summary>
         /// Enum value Obj
@@ -95,7 +125,17 @@ namespace Aspose.ThreeD.Cloud.SDK.Model
 		/// <summary>
         /// Enum value U3D
         /// </summary>            
-        U3D
+        U3D,
+		
+		/// <summary>
+        /// Enum value VRML
+        /// </summary>            
+        VRML,
+		
+		/// <summary>
+        /// Enum value X
+        /// </summary>            
+        X
 		
   }
 }

@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="U3DSaveOption.cs">
-//   Copyright (c) 2018 Aspose.ThreeD for Cloud
+//   Copyright (c) 2020 Aspose.ThreeD for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy

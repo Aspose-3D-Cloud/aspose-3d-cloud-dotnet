@@ -39,7 +39,7 @@ All Aspose.3D Cloud SDKs are licensed under [MIT License](https://github.com/asp
 
 # How to use the SDK?
 
-The complete source code is available in this repository folder. You can either directly use it in your project via source code or get [NuGet distribution](https://www.nuget.org/packages/Aspose.3D-Cloud/) (recommended). For more details, please visit our [documentation website](https://docs.aspose.cloud/display/cellscloud/Available+SDKs#AvailableSDKs-.NET).
+The complete source code is available in this repository folder. You can either directly use it in your project via source code or get [NuGet distribution](https://www.nuget.org/packages/Aspose.3D-Cloud/) (recommended). For more details, please visit our [documentation website](https://docs.aspose.cloud/cells/available-sdks/).
 
  
 
@@ -130,5 +130,5 @@ Your feedback is very important to us. Please feel free to contact via
 - [**Web API reference**](https://apireference.aspose.cloud/3d/)
 - [**Website**](https://www.aspose.cloud)
 - [**Product Home**](https://products.aspose.cloud/3d)
-- [**Documentation**](https://docs.aspose.cloud/display/3dcloud/Home)
+- [**Documentation**](https://docs.aspose.cloud/3d/)
 - [**Blog**](https://blog.aspose.cloud/category/3d/)

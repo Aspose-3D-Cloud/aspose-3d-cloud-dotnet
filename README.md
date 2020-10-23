@@ -7,16 +7,18 @@
 ## Process 3D Objects & Files in the Cloud
 
 - [Convert between 3D formats](https://docs.aspose.cloud/3d/converting-between-formats-using-aspose-3d-cloud/) without requring any additional tools or rendering software.
-- Modeling and data processing, including parametric modeling and object deletion from scene.
-- Utilities such as extract 3D contens from PDF file and triangulate meshes.
+- [Create new entities](https://docs.aspose.cloud/3d/create-a-new-entity-with-size/) with size such as a Box, Cylinder, Sphere, Torus or Plane.
+- [Extract 3D scene](https://docs.aspose.cloud/3d/extract-and-save-a-scene-in-a-different-format/) and save in a different format.
+- Triangulate a 3D file or just a scene.
+- Extract 3D PDF data and sasve in any format.
 
 ## Read & Write 3D Formats
 
-AMF, 3DS, RVM, DRC, DAE, DXF, FBX, OBJ, PDF, PLY, STL, U3D, GLTF, HTML
+**Additive Manufacturing Format** AMF, **3D Studio** 3DS, **AVEVA** RVM, **Google Draco** DRC, **Collada** DAE, **AutoCAD** DXF, **Autodesk** FBX, **Wavefront** OBJ, **3D** PDF, **Polygon File Format** PLY, **Standard Triangle Language** STL, **Universal3D** U3D, **GL Transmission Format** GLTF
 
 ## Read-Only Formats
 
-JT, X (DirectX), 3MF, ASE
+**Siemens** JT, **DirectX** X, **3D Manufacturing Format** 3MF, **3D Studio Max** ASE
 
 ## Integrated Storage API
 
@@ -46,9 +48,10 @@ var response = threeDCloudApi.PostConvertByFormatWithHttpInfo(name, newformat, n
 
 ## Aspose.3D Cloud SDKs in Popular Languages
 
-| Java |
-|---|
-| [GitHub](https://github.com/aspose-3d-cloud/aspose-3d-cloud-java) |
-| [Maven](https://repository.aspose.cloud/webapp/#/artifacts/browse/tree/General/repo/com/aspose/aspose-3d-cloud) |
+| Java | PHP | Python | Ruby | Node.js | Swift | Perl | GO |
+|---|---|---|---|---|---|---|---|
+| [GitHub](https://github.com/aspose-3d-cloud/aspose-3d-cloud-java) | [GitHub](https://github.com/Aspose-3D-Cloud/aspose-3d-cloud-php) | [GitHub](https://github.com/Aspose-3D-Cloud/aspose-3d-cloud-python) | [GitHub](https://github.com/Aspose-3D-Cloud/aspose-3d-cloud-ruby)  | [GitHub](https://github.com/Aspose-3D-Cloud/aspose-3d-cloud-node) | [GitHub](https://github.com/aspose-3d-cloud/aspose-3d-cloud-swift) | [GitHub](https://github.com/Aspose-3D-Cloud/aspose-3d-cloud-perl) | [GitHub](https://github.com/Aspose-3D-Cloud/aspose-3d-cloud-go) |
+| [Maven](https://repository.aspose.cloud/webapp/#/artifacts/browse/tree/General/repo/com/aspose/aspose-3d-cloud) | [Composer](https://packagist.org/packages/aspose/3d-sdk-php) | [PIP](https://pypi.org/project/aspose3dcloud/) | [GEM](https://rubygems.org/gems/aspose_3d_cloud)  | [NPM](https://www.npmjs.com/package/aspose3dcloud) | [POD](https://cocoapods.org/pods/Aspose3DCloud) |  [CPAN](https://metacpan.org/release/AsposeThreeDCloud-ThreeDCloudApi) | [GO](https://pkg.go.dev/github.com/Aspose-3D-Cloud/aspose-3d-cloud-go/v20?tab=overview) |
+o/com/aspose/aspose-3d-cloud) |
 
 [Home](https://www.aspose.cloud) | [Product Page](https://products.aspose.cloud/3d/net) | [Documentation](https://docs.aspose.cloud/3d/) | [Live Demo](https://products.aspose.app/3d/family) | [API Reference](https://apireference.aspose.cloud/3d/) | [Code Samples](https://github.com/Aspose-3D-Cloud/aspose-3d-cloud-dotnet/tree/master/src/Aspose.ThreeD.Cloud.SDK.Test) | [Blog](https://blog.aspose.cloud/category/3d/) | [Free Support](https://forum.aspose.cloud/c/3d) | [Free Trial](https://dashboard.aspose.cloud/#/apps)

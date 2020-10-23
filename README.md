@@ -18,7 +18,7 @@ AMF, 3DS, RVM, DRC, DAE, DXF, FBX, OBJ, PDF, PLY, STL, U3D, GLTF, HTML
 
 JT, X (DirectX), 3MF, ASE
 
-## Integratd Storage API
+## Integrated Storage API
 
 It gives you an ability to:
 

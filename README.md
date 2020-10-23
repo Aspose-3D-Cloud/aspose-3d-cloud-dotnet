@@ -1,134 +1,54 @@
-# Aspose.3D Cloud SDK for .NET [![NuGet](https://img.shields.io/nuget/v/Aspose.3D-Cloud.svg)](https://www.nuget.org/packages/Aspose.3D-Cloud/)
+![](https://img.shields.io/badge/REST%20API-v3.0-lightgrey) ![Nuget](https://img.shields.io/nuget/v/Aspose.3d-Cloud) ![Nuget](https://img.shields.io/nuget/dt/Aspose.3d-Cloud) [![GitHub license](https://img.shields.io/github/license/aspose-3d-cloud/aspose-3d-cloud-dotnet)](https://github.com/aspose-3d-cloud/aspose-3d-cloud-dotnet/blob/master/LICENSE) ![GitHub last commit](https://img.shields.io/github/last-commit/Aspose-3D-Cloud/aspose-3d-cloud-dotnet)
 
-- API version: 3.0
-- SDK version: 20.5
+# .NET SDK for 3D File Formats
 
-This repository contains Aspose.3D Cloud SDK for .NET source code. This SDK allows you to work with Aspose.3D Cloud REST APIs in your .NET applications quickly and easily, with zero initial cost.
+.NET SDK wraps Aspose.3D Cloud APIs so you could create, edit and convert 3D files in your cloud-based .NET applications with zero initial cost.
 
+## Process 3D Objects & Files in the Cloud
 
+- [Convert between 3D formats](https://docs.aspose.cloud/3d/converting-between-formats-using-aspose-3d-cloud/) without requring any additional tools or rendering software.
+- Modeling and data processing, including parametric modeling and object deletion from scene.
+- Utilities such as extract 3D contens from PDF file and triangulate meshes.
 
-# Key Features
+## Read & Write 3D Formats
 
-- Conversion between various document-related formats (10+ formats supported)
+AMF, 3DS, RVM, DRC, DAE, DXF, FBX, OBJ, PDF, PLY, STL, U3D, GLTF, HTML
 
-- Modeling and Data Processing,including parametric modeling and delete object from scene 
+## Read-Only Formats
 
-- Utilities,including extract 3D contens from PDF file and triangulate meshes 
+JT, X (DirectX), 3MF, ASE
 
-
-
-See [API Reference](https://apireference.aspose.cloud/3d/) for full API specification.
-
-
-
-# File,folder and storage API support
-
+## Integratd Storage API
 
 It gives you an ability to:
 
-- Upload, download, copy, move and delete files, including versions handling (if you are using Cloud storage that supports this feature - true by default)
-- Create, copy, move and delete folders
-- Copy and move files and folders accross separate storages in scope of a single operation
-- Check if certain file, folder or storage exists
+- Upload, download, copy, move and delete files, including versions handling (if you are using Cloud storage that supports this feature - true by default).
+- Create, copy, move and delete folders.
+- Copy and move files and folders accross separate storages in scope of a single operation.
+- Check if certain file, folder or storage exists.
 
-# Licensing
+## Get Started with Aspose.3D Cloud SDK for .NET
 
-All Aspose.3D Cloud SDKs are licensed under [MIT License](https://github.com/aspose-3d-cloud/aspose-3d-cloud-dotnet/blob/master/LICENSE).
+Register an account at [Aspose Cloud Dashboard](https://dashboard.aspose.cloud/#/apps) to get you application information. Next, execute `Install-Package Aspose.3d-Cloud` from the Package Manager Console in Visual Studio to fetch & reference Aspose.3D Cloud SDK assembly in your project. If you already have Aspose.3D Cloud SDK for .NET and want to upgrade it, please execute `Update-Package Aspose.3D-Cloud` to get the latest version. You may alternatively install the package from command line as `nuget install Aspose.3D-Cloud`.
 
+## Convert a 3D File to PDF in the Cloud
 
-
-# How to use the SDK?
-
-The complete source code is available in this repository folder. You can either directly use it in your project via source code or get [NuGet distribution](https://www.nuget.org/packages/Aspose.3D-Cloud/) (recommended). For more details, please visit our [documentation website](https://docs.aspose.cloud/cells/available-sdks/).
-
- 
-
-### Prerequisites
-
- 
-
-To use Aspose.3D Cloud SDK you need to register an account with [Aspose Cloud](https://www.aspose.cloud/) and lookup/create App Key and SID at [Cloud Dashboard](https://dashboard.aspose.cloud/#/apps). There is free quota available. For more details, see [Aspose Cloud Pricing](https://purchase.aspose.cloud/pricing).
-
- 
-
-### Installation
-
- 
-
-#### Install Aspose.3D-Cloud via NuGet
-
- 
-
-From the command line:
-
- 
-
-```
-nuget install Aspose.3D-Cloud
+```csharp
+var threeDCloudApi = new ThreeDCloudApi(grantType,AppKey, AppSid);//grantType is "client_credentials"
+string name = "srcFile";
+string newformat = "pdf";
+string newfilename = "saveasformat.pdf";
+string folder = "3DTest";
+bool isOverwrite = true;
+string storage = "First Storage";
+var response = threeDCloudApi.PostConvertByFormatWithHttpInfo(name, newformat, newfilename, folder, isOverwrite, storage);
 ```
 
- 
+## Aspose.3D Cloud SDKs in Popular Languages
 
-From Package Manager:
+| Java |
+|---|
+| [GitHub](https://github.com/aspose-3d-cloud/aspose-3d-cloud-java) |
+| [Maven](https://repository.aspose.cloud/webapp/#/artifacts/browse/tree/General/repo/com/aspose/aspose-3d-cloud) |
 
- 
-
-```
-PM> Install-Package Aspose.3D-Cloud
-```
-
- 
-
-From within Visual Studio:
-
-1. Open the Solution Explorer.
-
-2. Right-click on a project within your solution.
-
-3. Click on *Manage NuGet Packages...*
-
-4. Click on the *Browse* tab and search for "Aspose.3D-Cloud".
-
-5. Click on the Aspose.3D-Cloud package, select the appropriate version in the right-tab and click *Install*.
-
-### Sample usage
-
-    
-
-   The examples below show how your application have to initiate and convert whole file into different format with format parameter using Aspose.3D-Cloud library:
-
-    
-
-   ```
-    var threeDCloudApi = new ThreeDCloudApi(grantType,AppKey, AppSid);//grantType is "client_credentials"
-    string name = "srcFile";
-    string newformat = "pdf";
-    string newfilename = "saveasformat.pdf";
-    string folder = "3DTest";
-    bool isOverwrite = true;
-    string storage = "First Storage";
-    var response = threeDCloudApi.PostConvertByFormatWithHttpInfo(name, newformat, newfilename, folder, isOverwrite, storage);
-   ```
-
-
-
-# Tests
-
-[Tests](https://github.com/aspose-3D-cloud/aspose-3D-cloud-dotnet/tree/master/Aspose.3D.Cloud.SDK.Test) contain various examples of using the SDK.
-
-
-
-# Contact Us
-
-Your feedback is very important to us. Please feel free to contact via
-
-- [**Free Support Forum**](https://forum.aspose.cloud/c/3d)
-- [**Paid Support Helpdesk**](https://helpdesk.aspose.cloud/)
-
-# Resources
-
-- [**Web API reference**](https://apireference.aspose.cloud/3d/)
-- [**Website**](https://www.aspose.cloud)
-- [**Product Home**](https://products.aspose.cloud/3d)
-- [**Documentation**](https://docs.aspose.cloud/3d/)
-- [**Blog**](https://blog.aspose.cloud/category/3d/)
+[Home](https://www.aspose.cloud) | [Product Page](https://products.aspose.cloud/3d/net) | [Documentation](https://docs.aspose.cloud/3d/) | [Live Demo](https://products.aspose.app/3d/family) | [API Reference](https://apireference.aspose.cloud/3d/) | [Code Samples](https://github.com/Aspose-3D-Cloud/aspose-3d-cloud-dotnet/tree/master/src/Aspose.ThreeD.Cloud.SDK.Test) | [Blog](https://blog.aspose.cloud/category/3d/) | [Free Support](https://forum.aspose.cloud/c/3d) | [Free Trial](https://dashboard.aspose.cloud/#/apps)

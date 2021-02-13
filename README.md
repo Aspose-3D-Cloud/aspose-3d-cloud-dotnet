@@ -36,19 +36,22 @@
 
 Register an account at [Aspose Cloud Dashboard](https://dashboard.aspose.cloud/#/apps) to get you application information. Next, execute `Install-Package Aspose.3d-Cloud` from the Package Manager Console in Visual Studio to fetch & reference Aspose.3D Cloud SDK assembly in your project. If you already have Aspose.3D Cloud SDK for .NET, execute `Update-Package Aspose.3D-Cloud` to get the latest version. You may alternatively install the package from command line as `nuget install Aspose.3D-Cloud`.
 
-## Convert a 3D File to PDF in the Cloud
+## Convert 3D to PDF in C# .Net
 
 ```csharp
-var threeDCloudApi = new ThreeDCloudApi(grantType,AppKey, AppSid);//grantType is "client_credentials"
-string name = "srcFile";
-string newformat = "pdf";
-string newfilename = "saveasformat.pdf";
-string folder = "3DTest";
-bool isOverwrite = true;
-string storage = "First Storage";
-var response = threeDCloudApi.PostConvertByFormatWithHttpInfo(name, newformat, newfilename, folder, isOverwrite, storage);
-```
+	// Get your ClientId and ClientSecret from https://dashboard.aspose.cloud (free registration required).
 
+	ThreeDCloudApiApi threeDCloudApi = new ThreeDCloudApi("client_credentials", "MY_CLIENT_ID", "MY_CLIENT_SECRET");
+
+	string name = "sample.3d";
+	string newformat = "pdf";
+	string newfilename = "saveasformat.pdf";
+	string folder = "3DToPdf";
+	bool isOverwrite = true;
+	string storage = "My_Storage_Name";
+
+	var response = threeDCloudApi.PostConvertByFormat(name, newformat, newfilename, folder, isOverwrite, storage);
+```
 ## Aspose.3D Cloud SDKs in Popular Languages
 
 | Java | PHP | Python | Ruby | Node.js | Swift | Perl | GO |

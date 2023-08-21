@@ -2,17 +2,18 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>Aspose.3D-Cloud</id>
-        <version>20.5</version>
+        <version>23.8.0</version>
         <title>Aspose.3D Cloud SDK for .NET</title>
         <authors>asposecloud</authors>
         <owners>asposecloud</owners>
         <iconUrl>https://www.aspose.cloud/templates/asposecloud/App_Themes/V3/images/sdk/64x64/aspose_3d-for-net.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Aspose.3D Cloud for .NET is a SDK for working with 3D files. It allows developers to create/manipulate 3D scene and work with FBX,STL,OBJ,3DS,U3D,RVM,PDF,GLTF,HTML files. </description>
-        <releaseNotes>https://github.com/Aspose-3D-Cloud/aspose-3D-cloud-dotnet/releases/tag/21.6</releaseNotes>
+        <releaseNotes>https://github.com/Aspose-3D-Cloud/aspose-3D-cloud-dotnet/releases/tag/23.8</releaseNotes>
         <copyright>Copyright ©  Aspose 2002-2020. All Rights Reserved.</copyright>
-        <tags>AMF 3DS RVM DRC DAE DXF FBX OBJ PDF PLY STL U3D GLTF JT X 3MF ASE HTML 3D Cloud REST API Aspose.3D-Cloud Aspose.3D Aspose.Total-Cloud multi-platform 3D-Converter 3D-Conversion Converter Scene 3D-Scene Scene-Extraction Triangulate 3D-Studio Draco Collada AutoCAD AutoDesk Wavefront Polygon Triangle Universal3D DirectX 3DStudio 3D-Studio 3D-to-PDF 3D-to-HTML Box Cylinder Sphere Torus Plane Scene 3D-Scene</tags>
-        <dependencies>
+        <tags>AMF 3DS RVM DRC DAE DXF FBX OBJ PDF PLY STL U3D GLTF JT X 3MF ASE HTML 3D Cloud REST API Aspose.3D-Cloud Aspose.3D Aspose.Total-Cloud multi-platform 3D-Converter 3D-Conversion Converter Scene 3D-Scene Scene-Extraction Triangulate 3D-Studio Draco Collada AutoCAD AutoDesk Wavefront Polygon Triangle Universal3D DirectX 3DStudio 3D-Studio 3D-to-PDF 3D-to-HTML Box Cylinder Sphere Torus Pyramid Plane Scene 3D-Scene</tags>
+        <repository type="git" url="https://github.com/aspose-3d-cloud/aspose-3d-cloud-dotnet" branch="master" />
+		<dependencies>
             <dependency id="Newtonsoft.Json" version="9.0.1.19813" />
             <dependency id="RestSharp" version="105.1.0.0" />
         </dependencies>
